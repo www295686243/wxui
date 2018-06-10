@@ -1,0 +1,24 @@
+for size in range($space-size-min, $space-size-max, $space-size-step) {
+  .{$prefix}margin-lr-{size} {
+    margin-left: .1rem * size !important
+    margin-right: .1rem * size !important
+  }
+  .{$prefix}margin-tb-{size} {
+    margin-top: .1rem * size !important 
+    margin-bottom: .1rem * size !important
+  }
+  .{$prefix}margin-{size} {
+    margin: .1rem * size !important
+  }
+  .{$prefix}padding-lr-{size} {
+    padding-left: .1rem * size !important
+    padding-right: .1rem * size !important
+  }
+  .{$prefix}padding-tb-{size} {
+    padding-top: .1rem * size !important
+    padding-bottom: .1rem * size !important
+  }
+  .{$prefix}padding-{size} {
+    padding: .1rem * size !important
+  }
+}

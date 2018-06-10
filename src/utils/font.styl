@@ -1,0 +1,35 @@
+// 遍历出文字颜色
+for row in ($font-color-vars) {
+  .{$prefix}color-{row} {
+    color: lookup('$color-' + row)
+  }
+}
+// 文字大小
+for size in range($font-size-min, $font-size-max, 2) {
+  .{$prefix}font-{size} {
+    font-size: (size / 10)rem
+  }  
+}
+
+// H标签
+for size in range(1, 6) {
+  h{size} {
+    font-size: (($font-size-max - ((size - 1) * 2)) / 10)rem
+  }  
+}
+
+// 默认颜色
+.{$prefix}color-default {
+  color: $font-color
+}
+
+// 文字方向
+.{$prefix}text-left {
+  text-align: left
+}
+.{$prefix}text-right {
+  text-align: right
+}
+.{$prefix}text-center {
+  text-align: center
+}

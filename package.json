@@ -1,0 +1,41 @@
+{
+  "name": "wxui",
+  "version": "0.0.1",
+  "description": "a mobile ui framework",
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "webpack -p --progress --profile --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www295686243/wxui.git"
+  },
+  "keywords": [
+    "css",
+    "stylus",
+    "css framework",
+    "css ui"
+  ],
+  "author": "万鑫",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/www295686243/wxui/issues"
+  },
+  "homepage": "https://github.com/www295686243/wxui#readme",
+  "devDependencies": {
+    "ajv": "^6.5.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "glob": "^7.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "flex.css": "^1.1.7"
+  }
+}

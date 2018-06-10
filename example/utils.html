@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>utils</title>
+  <link rel="stylesheet" href="../dist/wxui.css">
+</head>
+<body>
+  <ul class="w-list padding-10 line">
+    <li>
+      <h5>前沿</h5>
+      <div class="w-margin-10">
+        1rem = 10px
+      </div>
+    </li>
+    <li>
+      <h5>文字颜色</h5>
+      <p>.w-color-primary</p>
+      <div class="w-margin-10">
+        <span class="w-color-default">default</span>
+        <span class="w-color-primary">primary</span>
+        <span class="w-color-sub">sub</span>
+        <span class="w-color-dot">dot</span>
+        <span class="w-color-success">success</span>
+        <span class="w-color-error">error</span>
+        <span class="w-color-danger">danger</span>
+        <span class="w-color-warning">warning</span>
+        <span class="w-color-yellow">yellow</span>
+        <span class="w-color-blue">blue</span>
+        <span class="w-color-green">green</span>
+        <span class="w-color-gray">gray</span>
+        <span class="w-color-disabled">disabled</span>
+      </div>
+    </li>
+    <li>
+      <h5>字号大小</h5>
+      <p>.w-font-24</p>
+      <div class="w-margin-10">
+        <div class="w-font-24">2.4rem</div>
+        <div class="w-font-22">2.2rem</div>
+        <div class="w-font-20">2rem</div>
+        <div class="w-font-18">1.8rem</div>
+        <div class="w-font-16">1.6rem</div>
+        <div class="w-font-14">1.4rem</div>
+        <div class="w-font-12">1.2rem</div>
+        <div class="w-font-10">1rem</div>
+      </div>
+      <h5>H标签</h5>
+      <div class="w-margin-10">
+        <h1>h1(2.4rem)</h1>
+        <h2>h2(2.2rem)</h2>
+        <h3>h3(2rem)</h3>
+        <h4>h4(1.8rem)</h4>
+        <h5>h5(1.6rem)</h5>
+        <h6>h6(1.4rem)</h6>
+      </div>
+    </li>
+    <li>
+      <h5>背景颜色</h5>
+      <p>.w-bg-primary (文字自动白色)</p>
+      <div class="w-margin-10">
+        <span class="w-bg-primary w-padding-10">primary</span>
+        <span class="w-bg-sub w-padding-10">sub</span>
+        <span class="w-bg-dot w-padding-10">dot</span>
+        <span class="w-bg-success w-padding-10">success</span>
+        <span class="w-bg-error w-padding-10">error</span>
+        <span class="w-bg-danger w-padding-10">danger</span>
+        <span class="w-bg-warning w-padding-10">warning</span>
+        <span class="w-bg-yellow w-padding-10">yellow</span>
+        <span class="w-bg-blue w-padding-10">blue</span>
+        <span class="w-bg-green w-padding-10">green</span>
+      </div>
+    </li>
+    <li>
+      <h5>间距</h5>
+      <p>.w-padding-(5 ～ 30) (四周padding)</p>
+      <p>.w-padding-lr-(5 ～ 30) (左右padding)</p>
+      <p>.w-padding-tb-(5 ～ 30) (上下padding)</p>
+      <p><strong>.w-margin-(5 ~ 30) 与padding同理</strong></p>
+      <div class="w-margin-tb-10">
+        <div class="w-padding-5 w-bg-primary">
+          <div class="w-bg-default w-padding-5 w-text-center">w-padding-5</div>
+        </div>
+      </div>
+      <div class="w-margin-tb-10">
+        <div class="w-padding-10 w-bg-primary">
+          <div class="w-bg-default w-padding-5 w-text-center">w-padding-10</div>
+        </div>
+      </div>
+      <div class="w-margin-tb-10">
+        <div class="w-padding-15 w-bg-primary">
+          <div class="w-bg-default w-padding-5 w-text-center">w-padding-15</div>
+        </div>
+      </div>
+      <div class="w-margin-tb-10">
+        <div class="w-padding-20 w-bg-primary">
+          <div class="w-bg-default w-padding-5 w-text-center">w-padding-20</div>
+        </div>
+      </div>
+      <div class="w-margin-tb-10">
+        <div class="w-padding-25 w-bg-primary">
+          <div class="w-bg-default w-padding-5 w-text-center">w-padding-25</div>
+        </div>
+      </div>
+      <div class="w-margin-tb-10">
+        <div class="w-padding-30 w-bg-primary">
+          <div class="w-bg-default w-padding-5 w-text-center">w-padding-30</div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <h5>边框(移动端1px解决方案)</h5>
+      <div class="w-margin-tb-10 w-text-center">
+        <div class="w-padding-10">
+          <div class="w-border w-padding-10">四周都有边框</div>
+        </div>
+        <div class="w-padding-10">
+          <div class="w-border-t w-padding-10">top边框</div>
+        </div>
+        <div class="w-padding-10">
+          <div class="w-border-r w-padding-10">right边框</div>
+        </div>
+        <div class="w-padding-10">
+          <div class="w-border-b w-padding-10">bottom边框</div>
+        </div>
+        <div class="w-padding-10">
+          <div class="w-border-l w-padding-10">left边框</div>
+        </div>
+        <div class="w-padding-10">
+          <div class="w-border-tb w-padding-10">上下边框</div>
+        </div>
+        <div class="w-padding-10">
+          <div class="w-border-lr w-padding-10">左右边框</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>

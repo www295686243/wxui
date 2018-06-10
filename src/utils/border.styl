@@ -1,0 +1,40 @@
+.{$prefix}border,
+.{$prefix}border-tb,
+.{$prefix}border-lr,
+.{$prefix}border-t,
+.{$prefix}border-r,
+.{$prefix}border-b,
+.{$prefix}border-l
+{
+  borderAfter()
+}
+
+.{$prefix}border:after {
+  border($border-color)
+}
+
+.{$prefix}border-t:after {
+  border($border-color, 'top')
+}
+
+.{$prefix}border-r:after {
+  border($border-color, 'right')
+}
+
+.{$prefix}border-b:after {
+  border($border-color, 'bottom')
+}
+
+.{$prefix}border-l:after {
+  border($border-color, 'left')
+}
+
+.{$prefix}border-tb:after {
+  border($border-color, 'top')
+  border($border-color, 'bottom')
+}
+
+.{$prefix}border-lr:after {
+  border($border-color, 'left')
+  border($border-color, 'right')
+}

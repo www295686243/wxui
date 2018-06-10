@@ -1,0 +1,62 @@
+@import '../common/index.styl'
+
+.{$prefix}btn
+{
+  position: relative
+	display: inline-block
+	text-decoration: none
+	text-align: center
+	margin: 0
+	padding: $button-padding
+	border-radius: $button-radius
+	white-space: nowrap // 强制一行
+	cursor: pointer
+	touch-action: manipulation // 解决移动端点击事件延迟
+	user-select: none
+  -webkit-tap-highlight-color: transparent
+	font-size: ($button-font-size / 10)rem
+  border($button-border-color, '', $button-border-size)
+  tapColor($button-bg-color)
+  color: $button-font-color
+  .iconfont{
+    margin-right: .6rem
+  }
+}
+
+// 循环生成不同颜色的按钮
+for row in ($background-vars) {
+  .{$prefix}btn.{row} {
+  	border-color: lookup('$color-' + row)
+    tapColor(lookup('$color-' + row))
+		color: #ffffff
+  }
+}
+
+// 直角
+.{$prefix}btn.straight {
+	border-radius: initial
+}
+
+// 块状
+.{$prefix}btn.block {
+	width: 100%	
+	padding: 1rem
+}
+
+// 小号
+.{$prefix}btn.small {
+	padding: $button-padding-small
+}
+
+// 大号
+.{$prefix}btn.big {
+	padding: $button-padding-big
+}
+
+// 圆形
+.{$prefix}btn.circle {
+	border-radius: 50%
+	width: 5rem
+	height: 5rem
+	padding: 0
+}

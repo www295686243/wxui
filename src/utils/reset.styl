@@ -1,0 +1,126 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box
+  outline: none
+}
+
+html {
+  // 解决pad横坚屏切换的时候文字自动放大的问题
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  font-size: 62.5%
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  color: $font-color
+  background-color: $body-bg
+  -webkit-font-smoothing: antialiased // 字体像素级平滑(在webkit浏览器中使文字看起来更细)
+  font-family: $body-family
+  -webkit-user-select: none // 禁止选择文字
+  /*
+  定义: 让滚动条产生滚动回弹的效果, 像ios原生的滚动条一样流畅
+  BUG: Safari浏览器上会有偶尔卡住或不能滑动的BUG
+  解决方案: 该元素的下一层子元素上，将height加1%或1px
+           伪类min-height: calc(100% + 1px)
+  该属性可能存在的其它BUG:
+    滚动中 scrollTop 属性不会变化
+    手势可穿过其他元素触发元素滚动
+    滚动时暂停其他 transition
+  */
+  -webkit-overflow-scrolling: touch 
+}
+
+body, img, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, iframe {
+  margin: 0
+  padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video {
+  display: block
+  margin: 0
+  padding: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%
+}
+
+fieldset, img {
+  border: 0
+}
+
+address, caption, cite, dfn, em, th, var, i, em {
+  font-style: normal
+  font-weight: normal
+}
+
+ol, ul {
+  list-style: none
+}
+
+a {
+  text-decoration: none
+  color: inherit
+  -webkit-touch-callout: none //IOS中长按a标签会弹出默认系统菜单，这个属性可以禁止这个功能
+  &:hover {
+    text-decoration: none
+  }
+}
+
+a, label, button, input, select {
+  // 适用于IOS,当点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景
+  // 要禁用这个效果设置透明度为0, 也可以重置颜色
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+input, select, button {
+  vertical-align: baseline
+  border-radius: 0
+  background-color: transparent
+}
+
+select {
+  -webkit-appearance: none
+  -moz-appearance: none
+}
+
+// 用于火狐浏览器下点击某些元素出现边框的问题
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none
+}
+
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle
+}
+
+// 去除input为number时的默认样式
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important
+  -moz-appearance: none !important
+  margin: 0
+}
+
+// 当设置了记住密码时，表单会变成黄色，此设置可以解决这个问题
+// 通过纯色的阴影覆盖黄色
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset
+}
+
+textarea {
+  outline: none
+  border-radius: 0
+  -webkit-appearance: none
+  -moz-appearance: none
+  overflow: auto
+  resize: none
+}

@@ -1,0 +1,12 @@
+// 遍历出背景色
+for row in ($background-vars) {
+  .{$prefix}bg-{row} {
+    background-color: lookup('$color-' + row)
+    color: #ffffff
+  }
+}
+
+.{$prefix}bg-default {
+  background-color: $body-bg
+  color: $font-color
+}

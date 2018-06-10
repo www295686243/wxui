@@ -1,0 +1,45 @@
+.w-list {
+  background-color: #fff;
+}
+.w-list > li {
+  position: relative;
+}
+.w-list span {
+  display: inline-block;
+}
+.w-list.line > li:not(:last-child) {
+  position: relative;
+}
+.w-list.line > li:not(:last-child):after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+  right: -100%;
+  bottom: -100%;
+  transform: scale(0.5);
+}
+.w-list.line > li:not(:last-child):after {
+  border-bottom: 1px solid #ccc;
+}
+.w-list.padding-5 > li {
+  padding: 0.5rem;
+}
+.w-list.padding-10 > li {
+  padding: 1rem;
+}
+.w-list.padding-15 > li {
+  padding: 1.5rem;
+}
+.w-list.padding-20 > li {
+  padding: 2rem;
+}
+.w-list.padding-25 > li {
+  padding: 2.5rem;
+}
+.w-list.padding-30 > li {
+  padding: 3rem;
+}

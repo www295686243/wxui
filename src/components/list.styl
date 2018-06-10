@@ -1,0 +1,31 @@
+@import '../common/index.styl'
+
+// 默认列表属性
+.{$prefix}list {
+  background-color: $list-bg
+  & > li {
+    position: relative
+  }
+  span {
+    display: inline-block
+  }
+}
+
+// 带下划线的列表
+.{$prefix}list.line {
+  & > li:not(:last-child) {
+    borderAfter()
+    &:after {
+      border($border-color, 'bottom')
+    }
+  }
+}
+
+// li带内间距的列表
+for size in range($space-size-min, $space-size-max, $space-size-step) {
+  .{$prefix}list.padding-{size} {
+    & > li {
+      padding: .1rem * size
+    }  
+  }
+}
