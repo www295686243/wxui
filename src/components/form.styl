@@ -1,0 +1,45 @@
+@import '../common/index.styl'
+
+.{$prefix}switch {
+  position: relative
+  display: block
+  width: 5.2rem
+  height: 3.2rem
+  border: $border-color
+  background-color: $border-color
+  border-radius: 1.6rem
+  -webkit-appearance: none // 去除系统默认appearance的样式,常用于IOS下移除原生样式
+
+  &:before,
+  &:after {
+    content: " "
+    position: absolute
+    top: 0
+    left: 0
+    height: 3rem
+    border-radius: 1.5rem
+    transition: transform .3s,-webkit-transform .3s  
+  }
+
+  &:before {
+    width: 5rem
+    background-color: #fdfdfd  
+  }
+
+  &:after {
+    width: 3rem
+    background-color: #ffffff
+    box-shadow: 0 1px 3px rgba(0,0,0,.4)  
+  }
+
+  &:checked {
+    border-color: $color-success;
+    background-color: $color-success;
+    &:before {
+      transform: scale(0);
+    }
+    &:after {
+      transform: translateX(2rem);
+    }
+  }
+}
