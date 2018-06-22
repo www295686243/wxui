@@ -25,21 +25,30 @@
 .w-list.line > li:not(:last-child):after {
   border-bottom: 1px solid #ccc;
 }
-.w-list.padding-5 > li {
+.w-list.padding-0 > li {
+  padding: 0rem;
+}
+.w-list.padding-1 > li {
   padding: 0.5rem;
 }
-.w-list.padding-10 > li {
+.w-list.padding-2 > li {
   padding: 1rem;
 }
-.w-list.padding-15 > li {
+.w-list.padding-3 > li {
   padding: 1.5rem;
 }
-.w-list.padding-20 > li {
+.w-list.padding-4 > li {
   padding: 2rem;
 }
-.w-list.padding-25 > li {
+.w-list.padding-5 > li {
   padding: 2.5rem;
 }
-.w-list.padding-30 > li {
+.w-list.padding-6 > li {
   padding: 3rem;
+}
+.w-list.padding-7 > li {
+  padding: 3.5rem;
+}
+.w-list.padding-8 > li {
+  padding: 4rem;
 }

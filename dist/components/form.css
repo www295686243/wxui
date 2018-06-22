@@ -1,0 +1,117 @@
+.w-switch {
+  position: relative;
+  display: inline-block;
+  width: 3.6rem;
+  height: 2rem;
+  border: 0.1rem solid #ccc;
+  background-color: #ccc;
+  border-radius: 1rem;
+  -webkit-appearance: none;
+}
+.w-switch:before,
+.w-switch:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.8rem;
+  border-radius: 0.9rem;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.w-switch:before {
+  width: 3.4rem;
+  background-color: #fdfdfd;
+}
+.w-switch:after {
+  width: 1.8rem;
+  background-color: #fff;
+  box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.4);
+}
+.w-switch:checked {
+  border-color: #1fb922;
+  background-color: #1fb922;
+}
+.w-switch:checked:before {
+  transform: scale(0);
+}
+.w-switch:checked:after {
+  transform: translateX(1.6rem);
+}
+.w-switch.small {
+  width: 3rem;
+  height: 1.8rem;
+  border-radius: 0.9rem;
+}
+.w-switch.small:before,
+.w-switch.small:after {
+  height: 1.6rem;
+  border-radius: 0.8rem;
+}
+.w-switch.small:before {
+  width: 2.8rem;
+}
+.w-switch.small:after {
+  width: 1.6rem;
+}
+.w-switch.small:checked:after {
+  transform: translateX(1.2rem);
+}
+.w-switch.big {
+  width: 4.2rem;
+  height: 2.4rem;
+  border-radius: 1.2rem;
+}
+.w-switch.big:before,
+.w-switch.big:after {
+  height: 2.2rem;
+  border-radius: 1.1rem;
+}
+.w-switch.big:before {
+  width: 4rem;
+}
+.w-switch.big:after {
+  width: 2.2rem;
+}
+.w-switch.big:checked:after {
+  transform: translateX(1.8rem);
+}
+.w-switch.primary:checked {
+  border-color: #f8504f;
+  background-color: #f8504f;
+}
+.w-switch.sub:checked {
+  border-color: #0ae;
+  background-color: #0ae;
+}
+.w-switch.dot:checked {
+  border-color: #e33;
+  background-color: #e33;
+}
+.w-switch.success:checked {
+  border-color: #1fb922;
+  background-color: #1fb922;
+}
+.w-switch.error:checked {
+  border-color: #f8504f;
+  background-color: #f8504f;
+}
+.w-switch.danger:checked {
+  border-color: #ef4f4f;
+  background-color: #ef4f4f;
+}
+.w-switch.warning:checked {
+  border-color: #ffb400;
+  background-color: #ffb400;
+}
+.w-switch.yellow:checked {
+  border-color: #f60;
+  background-color: #f60;
+}
+.w-switch.blue:checked {
+  border-color: #0ae;
+  background-color: #0ae;
+}
+.w-switch.green:checked {
+  border-color: #2c7;
+  background-color: #2c7;
+}
