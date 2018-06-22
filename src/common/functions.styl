@@ -4,7 +4,7 @@ color = 边框颜色
 location = 位置
 line = 边框粗细
 */
-border($color, $location = '', $line = 1) {
+borderFun($color, $location = '', $line = 1) {
   border{$location ? '-' + $location : ''}: ($line)px solid $color
 }
 
