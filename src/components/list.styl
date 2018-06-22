@@ -16,16 +16,16 @@
   & > li:not(:last-child) {
     borderAfter()
     &:after {
-      border($border-color, 'bottom')
+      borderFun($border-color, 'bottom')
     }
   }
 }
 
 // li带内间距的列表
-for size in range($space-size-min, $space-size-max, $space-size-step) {
+for size in range($space-size-min, $space-size-max) {
   .{$prefix}list.padding-{size} {
     & > li {
-      padding: .1rem * size
+      padding: .1rem * size * $space-size-multiple
     }  
   }
 }

@@ -1,0 +1,85 @@
+// 开关
+.{$prefix}switch {
+  position: relative
+  display: inline-block
+  width: $switch-default-width
+  height: $switch-default-height
+  border: .1rem solid $border-color
+  background-color: $border-color
+  border-radius: ($switch-default-height / 2)
+  -webkit-appearance: none // 去除系统默认appearance的样式,常用于IOS下移除原生样式
+
+  &:before,
+  &:after {
+    content: " "
+    position: absolute
+    top: 0
+    left: 0
+    height: ($switch-default-height - .2rem)
+    border-radius: (($switch-default-height - .2rem) / 2)
+    transition: transform .3s,-webkit-transform .3s  
+  }
+
+  &:before {
+    width: ($switch-default-width - .2rem)
+    background-color: #fdfdfd  
+  }
+
+  &:after {
+    width: ($switch-default-height - .2rem)
+    background-color: #ffffff
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.4)  
+  }
+
+  &:checked {
+    border-color: $color-success
+    background-color: $color-success
+    &:before {
+      transform: scale(0)
+    }
+    &:after {
+      transform: translateX(($switch-default-width - $switch-default-height))
+    }
+  }
+}
+
+switch($width, $height, $class) {
+  .{$prefix}switch.{$class} {
+    width: $width
+    height: $height
+    border-radius: ($height / 2)
+
+    &:before,
+    &:after {
+      height: ($height - .2rem)
+      border-radius: (($height - .2rem) / 2)
+    }
+
+    &:before {
+      width: ($width - .2rem)
+    }
+
+    &:after {
+      width: ($height - .2rem)
+    }
+
+    &:checked {
+      &:after {
+        transform: translateX(($width - $height))
+      }
+    }
+  }
+}
+
+switch($switch-small-width, $switch-small-height, 'small')
+switch($switch-big-width, $switch-big-height, 'big')
+
+// 背景色
+for row in ($background-vars) {
+  .{$prefix}switch.{row} {
+    &:checked {
+      border-color: lookup('$color-' + row)
+      background-color: lookup('$color-' + row)  
+    }
+  }
+}
