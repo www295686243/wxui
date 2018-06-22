@@ -1,24 +1,24 @@
-for size in range($space-size-min, $space-size-max, $space-size-step) {
+for size in range($space-size-min, $space-size-max) {
   .{$prefix}margin-lr-{size} {
-    margin-left: .1rem * size !important
-    margin-right: .1rem * size !important
+    margin-left: .1rem * size * $space-size-multiple !important
+    margin-right: .1rem * size * $space-size-multiple !important
   }
   .{$prefix}margin-tb-{size} {
-    margin-top: .1rem * size !important 
-    margin-bottom: .1rem * size !important
+    margin-top: .1rem * size * $space-size-multiple !important 
+    margin-bottom: .1rem * size * $space-size-multiple !important
   }
   .{$prefix}margin-{size} {
-    margin: .1rem * size !important
+    margin: .1rem * size * $space-size-multiple !important
   }
   .{$prefix}padding-lr-{size} {
-    padding-left: .1rem * size !important
-    padding-right: .1rem * size !important
+    padding-left: .1rem * size * $space-size-multiple !important
+    padding-right: .1rem * size * $space-size-multiple !important
   }
   .{$prefix}padding-tb-{size} {
-    padding-top: .1rem * size !important
-    padding-bottom: .1rem * size !important
+    padding-top: .1rem * size * $space-size-multiple !important
+    padding-bottom: .1rem * size * $space-size-multiple !important
   }
   .{$prefix}padding-{size} {
-    padding: .1rem * size !important
+    padding: .1rem * size * $space-size-multiple !important
   }
 }

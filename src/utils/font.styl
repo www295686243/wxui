@@ -5,16 +5,20 @@ for row in ($font-color-vars) {
   }
 }
 // 文字大小
-for size in range($font-size-min, $font-size-max, 2) {
+for size in range($font-size-min, $font-size-max) {
   .{$prefix}font-{size} {
-    font-size: (size / 10)rem
+    font-size: ((((size * 2) - 2) + 10) / 10rem)
   }  
 }
 
 // H标签
-for size in range(1, 6) {
+for size in range(1, 8) {
   h{size} {
-    font-size: (($font-size-max - ((size - 1) * 2)) / 10)rem
+    font-size: ((($font-size-max - size) * 2 + 10) / 10rem)
+    line-height: 1
+    if (size == 7 || size == 8) {
+      display: block
+    }
   }  
 }
 
