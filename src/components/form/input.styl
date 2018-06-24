@@ -1,0 +1,46 @@
+.{$prefix}input {
+  display: inline-block
+  width: 100%
+  -webkit-appearance: none
+  border: 0
+  // padding: .5rem
+  font-size: 1.4rem
+}
+
+.{$prefix}form {
+  width: 100%
+  border-collapse: collapse
+  white-space:nowrap
+  border-spacing: 1rem
+  tr {
+    td:nth-child(1) {
+      width: 1%
+      text-align: right
+    }
+    td:nth-child(2) {
+      display: flex
+      span,
+      i {
+        margin-left: 1rem
+      }
+    }
+  }
+  // td带内间距的列表
+  for size in range($space-size-min, $space-size-max) {
+    &.padding-{size} {
+      & > tbody > tr > td {
+        padding: .1rem * size * $space-size-multiple
+      }  
+    }
+  }
+  // 带下划线的列表
+  &.line {
+    & > tbody > tr:not(:last-child) td {
+      borderAfter()
+      &:after {
+        borderFun($border-color, 'bottom')
+      }
+    }
+  }
+      // borderAfter('bottom')
+}

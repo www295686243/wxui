@@ -11,7 +11,7 @@ borderFun($color, $location = '', $line = 1) {
 /**
 边框1px
 */
-borderAfter() {
+borderAfter($location = '') {
   position: relative
   &:after {
     display: block
@@ -24,6 +24,9 @@ borderAfter() {
     right: -100%
     bottom: -100%
     transform: scale(0.5)
+    if($location) {
+      borderFun($border-color, $location)
+    }
   }
 }
 

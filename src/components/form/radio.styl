@@ -1,0 +1,54 @@
+.{$prefix}radio {
+  position: relative
+  display: inline-block
+  width: 20px
+  height: 20px
+  -webkit-appearance: none
+  border: 1px solid $border-color
+  border-radius: 50%
+  transition: all .3s ease
+  &:after {
+    content: " "
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 60%
+    height: 30%
+    transform: translate(-50%, -70%) rotate(-45deg)
+    border-bottom: 1px solid transparent
+    border-left: 1px solid transparent
+  }
+  &:checked {
+    background-color: $color-primary
+    border-color: $color-primary
+    &:after {
+      border-color: #ffffff
+    }
+  }
+  // 直角
+  &.square {
+    border-radius: 3px
+  }
+  // 背景色
+  for row in ($background-vars) {
+    &.{row} {
+      &:checked {
+        border-color: lookup('$color-' + row)
+        background-color: lookup('$color-' + row)
+      }
+    }
+  }
+}
+
+radio($size, $class) {
+  .{$prefix}radio-{$class} {
+    @extend .{$prefix}radio
+    width: $size
+    height: $size
+  }
+}
+
+radio($radio-size-s, 's')
+radio($radio-size-m, 'm')
+radio($radio-size-l, 'l')
+radio($radio-size-xl, 'xl')

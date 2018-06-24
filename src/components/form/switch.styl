@@ -4,7 +4,7 @@
   display: inline-block
   width: $switch-default-width
   height: $switch-default-height
-  border: .1rem solid $border-color
+  border: 1px solid $border-color
   background-color: $border-color
   border-radius: ($switch-default-height / 2)
   -webkit-appearance: none // 去除系统默认appearance的样式,常用于IOS下移除原生样式
@@ -15,20 +15,20 @@
     position: absolute
     top: 0
     left: 0
-    height: ($switch-default-height - .2rem)
-    border-radius: (($switch-default-height - .2rem) / 2)
+    height: ($switch-default-height - 2px)
+    border-radius: (($switch-default-height - 2px) / 2)
     transition: transform .3s,-webkit-transform .3s  
   }
 
   &:before {
-    width: ($switch-default-width - .2rem)
+    width: ($switch-default-width - 2px)
     background-color: #fdfdfd  
   }
 
   &:after {
-    width: ($switch-default-height - .2rem)
+    width: ($switch-default-height - 2px)
     background-color: #ffffff
-    box-shadow: 0 .1rem .3rem rgba(0,0,0,.4)  
+    box-shadow: 0 1px 3px rgba(0,0,0,.4)  
   }
 
   &:checked {
@@ -51,16 +51,16 @@ switch($width, $height, $class) {
 
     &:before,
     &:after {
-      height: ($height - .2rem)
-      border-radius: (($height - .2rem) / 2)
+      height: ($height - 2px)
+      border-radius: (($height - 2px) / 2)
     }
 
     &:before {
-      width: ($width - .2rem)
+      width: ($width - 2px)
     }
 
     &:after {
-      width: ($height - .2rem)
+      width: ($height - 2px)
     }
 
     &:checked {
