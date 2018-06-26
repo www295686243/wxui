@@ -14,12 +14,12 @@
 	touch-action: manipulation // 解决移动端点击事件延迟
 	user-select: none
   -webkit-tap-highlight-color: transparent
-	font-size: ($button-font-size / 10)rem
+	font-size: $button-font-size
   borderFun($button-border-color, '', $button-border-size)
   tapColor($button-bg-color)
   color: $button-font-color
   .iconfont{
-    margin-right: .6rem
+    margin-right: size(5)
   }
 }
 
@@ -40,7 +40,7 @@ for row in ($background-vars) {
 // 块状
 .{$prefix}btn.block {
 	width: 100%	
-	padding: 1rem
+	padding: size(10)
 }
 
 // 小号
@@ -56,8 +56,8 @@ for row in ($background-vars) {
 // 圆形
 .{$prefix}btn.circle {
 	border-radius: 50%
-	width: 5rem
-	height: 5rem
+	width: size(50)
+	height: size(50)
 	padding: 0
 }
 
@@ -65,7 +65,7 @@ for row in ($background-vars) {
 .{$prefix}btn-group {
 		display: flex
 		borderFun($button-border-color, '', $button-border-size)
-		border-radius: .5rem
+		border-radius: size(5)
 		button {
 			border-radius: 0
 			border: 0
@@ -76,11 +76,11 @@ for row in ($background-vars) {
 			borderFun($button-border-color, 'right', $button-border-size)
 		}
 		button:first-child {
-			border-top-left-radius: .5rem
-			border-bottom-left-radius: .5rem
+			border-top-left-radius: size(5)
+			border-bottom-left-radius: size(5)
 		}
 		button:last-child {
-			border-top-right-radius: .5rem
-			border-bottom-right-radius: .5rem
+			border-top-right-radius: size(5)
+			border-bottom-right-radius: size(5)
 		}
 }

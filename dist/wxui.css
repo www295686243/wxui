@@ -722,7 +722,7 @@ h8 {
   background-color: #f5f5f5;
 }
 .w-btn .iconfont {
-  margin-right: 0.6rem;
+  margin-right: 0.5rem;
 }
 .w-btn.primary {
   border-color: #f8504f;
@@ -1058,8 +1058,8 @@ h8 {
 .w-radio-xl {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   -webkit-appearance: none;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -1072,11 +1072,11 @@ h8 {
 .w-radio-xl:after {
   content: " ";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 60%;
   height: 30%;
-  transform: translate(-50%, -70%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
 }
@@ -1100,7 +1100,7 @@ h8 {
 .w-radio-m.square,
 .w-radio-l.square,
 .w-radio-xl.square {
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 .w-radio.primary:checked,
 .w-radio-s.primary:checked,
@@ -1183,20 +1183,20 @@ h8 {
   background-color: #2c7;
 }
 .w-radio-s {
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 .w-radio-m {
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .w-radio-l {
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .w-radio-xl {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .w-checkbox,
 .w-checkbox-s,
@@ -1205,8 +1205,8 @@ h8 {
 .w-checkbox-xl {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   -webkit-appearance: none;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -1219,11 +1219,11 @@ h8 {
 .w-checkbox-xl:after {
   content: " ";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 60%;
   height: 30%;
-  transform: translate(-50%, -70%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
 }
@@ -1247,7 +1247,7 @@ h8 {
 .w-checkbox-m.square,
 .w-checkbox-l.square,
 .w-checkbox-xl.square {
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 .w-checkbox.primary:checked,
 .w-checkbox-s.primary:checked,
@@ -1330,20 +1330,23 @@ h8 {
   background-color: #2c7;
 }
 .w-checkbox-s {
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.w-checkbox-s:after {
+  top: 50%;
 }
 .w-checkbox-m {
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .w-checkbox-l {
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .w-checkbox-xl {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .w-form .input {
   flex-grow: 1;
@@ -1394,6 +1397,7 @@ h8 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-right: 0.5rem;
+  color: #999;
 }
 .w-search .icon:before {
   content: "\E627";
@@ -1425,13 +1429,127 @@ h8 {
   flex-grow: 1;
   flex-shrink: 1;
 }
-.w-tab {
-  border-bottom: 1px solid #ddd;
+.w-tab,
+.w-tab-simple {
   display: flex;
 }
-.w-tab button {
+.w-tab button,
+.w-tab-simple button {
   border-radius: 0;
   border: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+.w-tab button:not(.active) {
+  border-bottom: 1px solid #ddd;
+}
+.w-tab button.active {
+  border: 1px solid #ddd;
+  border-bottom: 0;
+}
+.w-tab.primary button {
+  border-color: #f8504f;
+}
+.w-tab.primary button.active {
+  color: #f8504f;
+}
+.w-tab.sub button {
+  border-color: #0ae;
+}
+.w-tab.sub button.active {
+  color: #0ae;
+}
+.w-tab.dot button {
+  border-color: #e33;
+}
+.w-tab.dot button.active {
+  color: #e33;
+}
+.w-tab.success button {
+  border-color: #1fb922;
+}
+.w-tab.success button.active {
+  color: #1fb922;
+}
+.w-tab.error button {
+  border-color: #f8504f;
+}
+.w-tab.error button.active {
+  color: #f8504f;
+}
+.w-tab.danger button {
+  border-color: #ef4f4f;
+}
+.w-tab.danger button.active {
+  color: #ef4f4f;
+}
+.w-tab.warning button {
+  border-color: #ffb400;
+}
+.w-tab.warning button.active {
+  color: #ffb400;
+}
+.w-tab.yellow button {
+  border-color: #f60;
+}
+.w-tab.yellow button.active {
+  color: #f60;
+}
+.w-tab.blue button {
+  border-color: #0ae;
+}
+.w-tab.blue button.active {
+  color: #0ae;
+}
+.w-tab.green button {
+  border-color: #2c7;
+}
+.w-tab.green button.active {
+  color: #2c7;
+}
+.w-tab-simple {
+  border-bottom: 1px solid #ddd;
+}
+.w-tab-simple.primary button.active {
+  color: #f8504f;
+  border-bottom: 2 solid #f8504f;
+}
+.w-tab-simple.sub button.active {
+  color: #0ae;
+  border-bottom: 2 solid #0ae;
+}
+.w-tab-simple.dot button.active {
+  color: #e33;
+  border-bottom: 2 solid #e33;
+}
+.w-tab-simple.success button.active {
+  color: #1fb922;
+  border-bottom: 2 solid #1fb922;
+}
+.w-tab-simple.error button.active {
+  color: #f8504f;
+  border-bottom: 2 solid #f8504f;
+}
+.w-tab-simple.danger button.active {
+  color: #ef4f4f;
+  border-bottom: 2 solid #ef4f4f;
+}
+.w-tab-simple.warning button.active {
+  color: #ffb400;
+  border-bottom: 2 solid #ffb400;
+}
+.w-tab-simple.yellow button.active {
+  color: #f60;
+  border-bottom: 2 solid #f60;
+}
+.w-tab-simple.blue button.active {
+  color: #0ae;
+  border-bottom: 2 solid #0ae;
+}
+.w-tab-simple.green button.active {
+  color: #2c7;
+  border-bottom: 2 solid #2c7;
 }

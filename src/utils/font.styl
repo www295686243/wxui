@@ -5,18 +5,19 @@ for row in ($font-color-vars) {
   }
 }
 // 文字大小
-for size in range($font-size-min, $font-size-max) {
-  .{$prefix}font-{size} {
-    font-size: ((((size * 2) - 2) + 10) / 10rem)
+for item in range($font-size-min, $font-size-max) {
+  .{$prefix}font-{item} {
+    font-size: size(((item * 2) - 2) + 10)
   }  
 }
 
 // H标签
-for size in range(1, 8) {
-  h{size} {
-    font-size: ((($font-size-max - size) * 2 + 10) / 10rem)
+for item in range(1, 8) {
+  h{item} {
+    font-size: size(($font-size-max - item) * 2 + 10)
     line-height: 1
-    if (size == 7 || size == 8) {
+    // h7与h8为自定义标签，与H标签统一为块状元素
+    if (item == 7 || item == 8) {
       display: block
     }
   }  

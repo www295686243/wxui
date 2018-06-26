@@ -1,12 +1,50 @@
 @import '../common/index.styl'
 
-.{$prefix}tab {
-		borderFun($button-border-color, 'bottom', $button-border-size)
-    display: flex
+.{$prefix}tab,
+.{$prefix}tab-simple {
+		display: flex
     button {
 			border-radius: 0
 			border: 0
 			flex-grow: 1
       flex-shrink: 1
+			padding-top: size(8)
+			padding-bottom: size(8)
+			font-size: size(14)
+		}
+}
+
+.{$prefix}tab {
+		button:not(.active) {
+			borderFun($button-border-color, 'bottom')
+		}
+		button.active {
+			borderFun($button-border-color)
+			border-bottom: 0
+		}
+		// 背景色
+		for row in ($background-vars) {
+			&.{row} {
+				button {
+					border-color: lookup('$color-' + row)
+				}
+				button.active {
+					color: lookup('$color-' + row)
+				}
+			}
+		}
+}
+
+// 简洁风格
+.{$prefix}tab-simple {
+		borderFun($button-border-color, 'bottom')
+		// 背景色
+		for row in ($background-vars) {
+			&.{row} {
+				button.active {
+					color: lookup('$color-' + row)
+					borderFun(lookup('$color-' + row), 'bottom', 2)
+				}
+			}
 		}
 }

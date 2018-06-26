@@ -4,8 +4,8 @@ color = 边框颜色
 location = 位置
 line = 边框粗细
 */
-borderFun($color, $location = '', $line = 1) {
-  border{$location ? '-' + $location : ''}: ($line)px solid $color
+borderFun($color, $location = '', $line = 1px) {
+  border{$location ? '-' + $location : ''}: $line solid $color
 }
 
 /**
@@ -44,4 +44,8 @@ tapColor($color, $opacity = .9) {
 bg($background, $color = #fff) {
   background-color: $background
   color: $color
+}
+
+size($size) {
+  ($size / 10)rem
 }

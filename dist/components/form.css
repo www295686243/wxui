@@ -157,8 +157,8 @@
 .w-radio-xl {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   -webkit-appearance: none;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -171,11 +171,11 @@
 .w-radio-xl:after {
   content: " ";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 60%;
   height: 30%;
-  transform: translate(-50%, -70%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
 }
@@ -199,7 +199,7 @@
 .w-radio-m.square,
 .w-radio-l.square,
 .w-radio-xl.square {
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 .w-radio.primary:checked,
 .w-radio-s.primary:checked,
@@ -282,20 +282,20 @@
   background-color: #2c7;
 }
 .w-radio-s {
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 .w-radio-m {
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .w-radio-l {
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .w-radio-xl {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .w-checkbox,
 .w-checkbox-s,
@@ -304,8 +304,8 @@
 .w-checkbox-xl {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   -webkit-appearance: none;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -318,11 +318,11 @@
 .w-checkbox-xl:after {
   content: " ";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 60%;
   height: 30%;
-  transform: translate(-50%, -70%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
 }
@@ -346,7 +346,7 @@
 .w-checkbox-m.square,
 .w-checkbox-l.square,
 .w-checkbox-xl.square {
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 .w-checkbox.primary:checked,
 .w-checkbox-s.primary:checked,
@@ -429,20 +429,23 @@
   background-color: #2c7;
 }
 .w-checkbox-s {
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.w-checkbox-s:after {
+  top: 50%;
 }
 .w-checkbox-m {
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .w-checkbox-l {
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .w-checkbox-xl {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .w-form .input {
   flex-grow: 1;

@@ -22,10 +22,10 @@
 }
 
 // li带内间距的列表
-for size in range($space-size-min, $space-size-max) {
-  .{$prefix}list.padding-{size} {
+for item in range($space-size-min, $space-size-max) {
+  .{$prefix}list.padding-{item} {
     & > li {
-      padding: .1rem * size * $space-size-multiple
+      padding: size(1) * item * $space-size-multiple
     }  
   }
 }

@@ -1,7 +1,7 @@
 @import '../common/index.styl'
 
 .{$prefix}search {
-  padding: .5rem .8rem
+  padding: size(5) size(8)
   display: flex
   background-color: #F4F4F4
   align-items: stretch
@@ -10,19 +10,20 @@
     display: flex
     flex-grow: 1
     flex-shrink: 1
-    border-radius: 2.5rem
+    border-radius: size(25)
     overflow: hidden
-    padding: .5rem
-    font-size: 1.2rem
+    padding: size(5)
+    font-size: size(12)
     background: #ffffff
   }
   .icon {
     font-family: "w-icon" !important
-    font-size: 1.6rem
+    font-size: size(16)
     font-style: normal
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-    margin-right: .5rem
+    margin-right: size(5)
+    color: #999
     &:before {
       content: "\e627"
     }
@@ -34,9 +35,9 @@
   .cancel {
     flex-grow: 0
     flex-shrink: 0
-    margin-left: .5rem
+    margin-left: size(5)
     transition: all .3s
-    margin-right: -5rem
+    margin-right: -(size(50))
     &.show {
       margin-right: 0  
     }
