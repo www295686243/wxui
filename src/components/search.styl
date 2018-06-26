@@ -1,0 +1,54 @@
+@import '../common/index.styl'
+
+.{$prefix}search {
+  padding: .5rem .8rem
+  display: flex
+  background-color: #F4F4F4
+  align-items: stretch
+  overflow: hidden
+  .container {
+    display: flex
+    flex-grow: 1
+    flex-shrink: 1
+    border-radius: 2.5rem
+    overflow: hidden
+    padding: .5rem
+    font-size: 1.2rem
+    background: #ffffff
+  }
+  .icon {
+    font-family: "w-icon" !important
+    font-size: 1.6rem
+    font-style: normal
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    margin-right: .5rem
+    &:before {
+      content: "\e627"
+    }
+  }
+  .icon {
+    flex-grow: 0
+    flex-shrink: 0  
+  }
+  .cancel {
+    flex-grow: 0
+    flex-shrink: 0
+    margin-left: .5rem
+    transition: all .3s
+    margin-right: -5rem
+    &.show {
+      margin-right: 0  
+    }
+    button {
+      border: 0
+      height: 100%
+      color: #666
+      tapColor(#F5F5F5)
+    }
+  }
+  .input {
+    flex-grow: 1
+    flex-shrink: 1
+  }
+}

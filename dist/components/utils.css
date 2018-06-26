@@ -399,6 +399,12 @@ h8 {
 .w-flex {
   display: flex;
 }
+.w-flex > div {
+  display: flex;
+}
+.w-flex > div > div {
+  width: 100%;
+}
 .w-flex.dir-left {
   flex-direction: 'disabled';
 }

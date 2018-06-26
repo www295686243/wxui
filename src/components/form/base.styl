@@ -3,7 +3,16 @@
   width: 100%
   li {
     display: flex
-    align-items: center
+    align-items: stretch
+    & > div {
+      display: flex
+      & > div {
+        width: 100%  
+      }
+    }
+    .textarea {
+      display: block  
+    }
   }
   .label {
     white-space: nowrap
@@ -15,10 +24,15 @@
     button {
       border: 0
       border-radius: 0
-      padding: 1.2rem
+      height: 100%
     }
     span {
       padding: 0 1rem
     }
+  }
+  .label,
+  .action,
+  .input {
+    align-items: center
   }
 }

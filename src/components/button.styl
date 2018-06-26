@@ -60,3 +60,27 @@ for row in ($background-vars) {
 	height: 5rem
 	padding: 0
 }
+
+// 按钮组
+.{$prefix}btn-group {
+		display: flex
+		borderFun($button-border-color, '', $button-border-size)
+		border-radius: .5rem
+		button {
+			border-radius: 0
+			border: 0
+			flex-grow: 1
+      flex-shrink: 1
+		}
+		button:not(:last-child) {
+			borderFun($button-border-color, 'right', $button-border-size)
+		}
+		button:first-child {
+			border-top-left-radius: .5rem
+			border-bottom-left-radius: .5rem
+		}
+		button:last-child {
+			border-top-right-radius: .5rem
+			border-bottom-right-radius: .5rem
+		}
+}
