@@ -74,11 +74,12 @@ a, label, button, input, select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
-input, select, button {
+input, select, button, textarea {
   vertical-align: baseline
   border-radius: 0
   background-color: transparent
   touch-action: manipulation // 解决点击300毫秒延迟的问题
+  border: 0
 }
 
 select {
@@ -87,13 +88,13 @@ select {
 }
 
 // 用于火狐浏览器下点击某些元素出现边框的问题
-button::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-input[type="file"] > input[type="button"]::-moz-focus-inner {
-  border: none
-}
+// button::-moz-focus-inner,
+// input[type="reset"]::-moz-focus-inner,
+// input[type="button"]::-moz-focus-inner,
+// input[type="submit"]::-moz-focus-inner,
+// input[type="file"] > input[type="button"]::-moz-focus-inner {
+//   border: none
+// }
 
 input[type=checkbox], input[type=radio] {
   vertical-align: middle

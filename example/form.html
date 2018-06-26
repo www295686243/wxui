@@ -102,21 +102,42 @@
     </li>
     <li>
       <h5>input</h5>
-      <table class="w-form padding-1 line">
-        <tr>
-          <td><label>默认：</label></td>
-          <td>
-            <input type="text" placeholder="输入框" class="w-input">
-          </td>
-        </tr>
-        <tr>
-          <td><label>有图标的：</label></td>
-          <td>
-            <input type="text" placeholder="输入框" class="w-input">
-            <span>显示</span>
-          </td>
-        </tr>
-      </table>
+      <ul class="w-list line w-form">
+        <li>
+          <div class="label">默认：</div>
+          <div class="input"><input type="text" placeholder="输入框"></div>
+        </li>
+        <li>
+          <div class="label">默认：</div>
+          <div class="input"><input type="text" placeholder="输入框"></div>
+          <div class="action">
+            <span>文字</span>
+          </div>
+        </li>
+        <li>
+          <div class="label">默认：</div>
+          <div class="input"><input type="text" placeholder="输入框"></div>
+          <div class="action">
+            <button class="w-btn primary">发送验证码</button>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h5>textarea</h5>
+      <ul class="w-list padding-2 line w-form">
+        <li>
+          <div class="textarea">
+            <textarea placeholder="请输入..."></textarea>
+          </div>
+        </li>
+        <li>
+          <div class="textarea">
+            <textarea placeholder="请输入..."></textarea>
+            <div class="counter">0/140</div>
+          </div>
+        </li>
+      </ul>
     </li>
   </ul>
 </body>
