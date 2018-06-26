@@ -36,11 +36,8 @@
 .w-switch {
   position: relative;
   display: inline-block;
-  width: 36px;
-  height: 20px;
   border: 1px solid #ccc;
   background-color: #ccc;
-  border-radius: 10px;
   -webkit-appearance: none;
 }
 .w-switch:before,
@@ -49,16 +46,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 18px;
-  border-radius: 9px;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 .w-switch:before {
-  width: 34px;
   background-color: #fdfdfd;
 }
 .w-switch:after {
-  width: 18px;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
@@ -68,6 +61,22 @@
 }
 .w-switch:checked:before {
   transform: scale(0);
+}
+.w-switch {
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+}
+.w-switch:before,
+.w-switch:after {
+  height: 18px;
+  border-radius: 9px;
+}
+.w-switch:before {
+  width: 34px;
+}
+.w-switch:after {
+  width: 18px;
 }
 .w-switch:checked:after {
   transform: translateX(16px);
@@ -171,7 +180,7 @@
 .w-radio-xl:after {
   content: " ";
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   width: 60%;
   height: 30%;

@@ -2,11 +2,8 @@
 .{$prefix}switch {
   position: relative
   display: inline-block
-  width: $switch-default-width
-  height: $switch-default-height
   border: 1px solid $border-color
   background-color: $border-color
-  border-radius: ($switch-default-height / 2)
   -webkit-appearance: none // 去除系统默认appearance的样式,常用于IOS下移除原生样式
 
   &:before,
@@ -15,18 +12,14 @@
     position: absolute
     top: 0
     left: 0
-    height: ($switch-default-height - 2px)
-    border-radius: (($switch-default-height - 2px) / 2)
     transition: transform .3s,-webkit-transform .3s  
   }
 
   &:before {
-    width: ($switch-default-width - 2px)
     background-color: #fdfdfd  
   }
 
   &:after {
-    width: ($switch-default-height - 2px)
     background-color: #ffffff
     box-shadow: 0 1px 3px rgba(0,0,0,.4)  
   }
@@ -37,14 +30,12 @@
     &:before {
       transform: scale(0)
     }
-    &:after {
-      transform: translateX(($switch-default-width - $switch-default-height))
-    }
   }
 }
 
-switch($width, $height, $class) {
-  .{$prefix}switch.{$class} {
+switch($width, $height, $class = '') {
+  $className = $class ? '.' + $class : ''
+  .{$prefix}switch{$className} {
     width: $width
     height: $height
     border-radius: ($height / 2)
@@ -71,6 +62,7 @@ switch($width, $height, $class) {
   }
 }
 
+switch($switch-default-width, $switch-default-height)
 switch($switch-small-width, $switch-small-height, 'small')
 switch($switch-big-width, $switch-big-height, 'big')
 
