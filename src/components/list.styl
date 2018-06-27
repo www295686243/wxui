@@ -9,14 +9,38 @@
   span {
     display: inline-block
   }
-}
-
-// 带下划线的列表
-.{$prefix}list.line {
-  & > li:not(:last-child) {
-    borderAfter()
-    &:after {
-      borderFun($border-color, 'bottom')
+  // 带下划线的列表
+  &.line {
+    & > li:not(:last-child) {
+      borderAfter()
+      &:after {
+        borderFun($border-color, 'bottom')
+      }
+    }
+  }
+  // 右边箭头
+  &.link {
+    & > li {
+      &:after {
+        content: "\e697"
+        font-family: "w-icon" !important
+        font-size: inherit
+        font-style: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+      }  
+    }
+  }
+  // 案例一
+  &.theme-1 {
+    @extend .{$prefix}list.link
+    & > li {
+      display: flex
+      align-items: center
+      padding: size(10)
+      & > i {
+        margin-right: size(10)
+      }
     }
   }
 }
@@ -29,4 +53,3 @@ for item in range($space-size-min, $space-size-max) {
     }  
   }
 }
-

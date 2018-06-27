@@ -16,10 +16,8 @@ for item in range(1, 8) {
   h{item} {
     font-size: size(($font-size-max - item) * 2 + 10)
     line-height: 1
-    // h7与h8为自定义标签，与H标签统一为块状元素
-    if (item == 7 || item == 8) {
-      display: block
-    }
+    display: inline-block
+    font-weight: normal
   }  
 }
 

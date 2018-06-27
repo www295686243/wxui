@@ -25,6 +25,23 @@
 .w-list.line > li:not(:last-child):after {
   border-bottom: 1px solid #ccc;
 }
+.w-list.link > li:after,
+.w-list.theme-1 > li:after {
+  content: "\E697";
+  font-family: "w-icon" !important;
+  font-size: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.w-list.theme-1 > li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.w-list.theme-1 > li > i {
+  margin-right: 1rem;
+}
 .w-list.padding-0 > li {
   padding: 0rem;
 }
