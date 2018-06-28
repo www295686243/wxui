@@ -9,6 +9,14 @@
   span {
     display: inline-block
   }
+  // li带内间距的列表
+  for item in range($space-size-min, $space-size-max) {
+    &.padding-{item} {
+      & > li {
+        padding: size(1) * item * $space-size-multiple
+      }  
+    }
+  }
   // 带下划线的列表
   &.line {
     & > li:not(:last-child) {
@@ -21,23 +29,57 @@
   // 右边箭头
   &.link {
     & > li {
-      &:after {
+      &:before {
         content: "\e697"
         font-family: "w-icon" !important
         font-size: inherit
         font-style: normal
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
+        position: absolute
+        right: size(10)
+        top: 50%
+        transform: translateY(-50%)
+        font-size: size(14)
       }  
     }
   }
-  // 案例一
-  &.theme-1 {
-    @extend .{$prefix}list.link
+  // 让li带弹性布局
+  &.flex {
     & > li {
       display: flex
       align-items: center
-      padding: size(10)
+    }
+  }
+  // 让li带按下效果
+  &.active {
+    & > li {
+      &:active {
+        background-color: $color-active
+      }  
+    }  
+  }
+  // 示例一
+  &.theme-1 {
+    @extend .{$prefix}list.link
+    @extend .{$prefix}list.flex
+    @extend .{$prefix}list.line
+    @extend .{$prefix}list.active
+    @extend .{$prefix}list.padding-2
+    & > li {
+      & > i {
+        margin-right: size(10)
+      }
+    }
+  }
+  // 示例二
+  &.theme-2 {
+    display: flex
+    @extend .{$prefix}list.flex
+    @extend .{$prefix}list.padding-1
+    flex-wrap: wrap
+    & > li {
+      width: 33.333333%
       & > i {
         margin-right: size(10)
       }
@@ -45,11 +87,3 @@
   }
 }
 
-// li带内间距的列表
-for item in range($space-size-min, $space-size-max) {
-  .{$prefix}list.padding-{item} {
-    & > li {
-      padding: size(1) * item * $space-size-multiple
-    }  
-  }
-}

@@ -102,6 +102,14 @@
 .w-btn.green:active {
   background-color: #1fb86b;
 }
+.w-btn.white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #fff;
+}
+.w-btn.white:active {
+  background-color: #e6e6e6;
+}
 .w-btn.straight {
   border-radius: initial;
 }

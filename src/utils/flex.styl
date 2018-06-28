@@ -135,3 +135,17 @@
     }  
   }
 }
+
+// 栅格布局
+// 换行 用于父级
+.flex-wrap {
+  flex-wrap: wrap
+}
+
+for i in range(1,12){
+  .flex-row-{i} {
+    & > div {
+      width: (100/i)%
+    }  
+  }
+}

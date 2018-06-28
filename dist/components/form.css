@@ -159,6 +159,10 @@
   border-color: #2c7;
   background-color: #2c7;
 }
+.w-switch.white:checked {
+  border-color: #fff;
+  background-color: #fff;
+}
 .w-radio,
 .w-radio-s,
 .w-radio-m,
@@ -289,6 +293,14 @@
 .w-radio-xl.green:checked {
   border-color: #2c7;
   background-color: #2c7;
+}
+.w-radio.white:checked,
+.w-radio-s.white:checked,
+.w-radio-m.white:checked,
+.w-radio-l.white:checked,
+.w-radio-xl.white:checked {
+  border-color: #fff;
+  background-color: #fff;
 }
 .w-radio-s {
   width: 1.4rem;
@@ -436,6 +448,14 @@
 .w-checkbox-xl.green:checked {
   border-color: #2c7;
   background-color: #2c7;
+}
+.w-checkbox.white:checked,
+.w-checkbox-s.white:checked,
+.w-checkbox-m.white:checked,
+.w-checkbox-l.white:checked,
+.w-checkbox-xl.white:checked {
+  border-color: #fff;
+  background-color: #fff;
 }
 .w-checkbox-s {
   width: 1.4rem;

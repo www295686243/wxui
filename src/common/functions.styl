@@ -43,7 +43,11 @@ tapColor($color, $opacity = .9) {
 
 bg($background, $color = #fff) {
   background-color: $background
-  color: $color
+  if ($background == #ffffff) {
+    color: $font-color
+  } else {
+    color: $color
+  }
 }
 
 size($size) {

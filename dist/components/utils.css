@@ -38,6 +38,10 @@
   background-color: #2c7;
   color: #fff;
 }
+.w-bg-white {
+  background-color: #fff;
+  color: #333;
+}
 .w-bg-default {
   background-color: #fff;
   color: #333;
@@ -77,6 +81,9 @@
 }
 .w-color-disabled {
   color: #ccc;
+}
+.w-color-white {
+  color: #fff;
 }
 .w-font-1 {
   font-size: 1rem;
@@ -420,7 +427,7 @@ h8 {
   width: 100%;
 }
 .w-flex.dir-left {
-  flex-direction: 'disabled';
+  flex-direction: 'white';
 }
 .w-flex.dir-right {
   flex-direction: row-reverse;
@@ -545,4 +552,43 @@ h8 {
 .w-flex > .flex-box-10 {
   flex-grow: 10;
   flex-shrink: 10;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row-1 > div {
+  width: 100%;
+}
+.flex-row-2 > div {
+  width: 50%;
+}
+.flex-row-3 > div {
+  width: 33.333333333333336%;
+}
+.flex-row-4 > div {
+  width: 25%;
+}
+.flex-row-5 > div {
+  width: 20%;
+}
+.flex-row-6 > div {
+  width: 16.666666666666668%;
+}
+.flex-row-7 > div {
+  width: 14.285714285714286%;
+}
+.flex-row-8 > div {
+  width: 12.5%;
+}
+.flex-row-9 > div {
+  width: 11.11111111111111%;
+}
+.flex-row-10 > div {
+  width: 10%;
+}
+.flex-row-11 > div {
+  width: 9.090909090909092%;
+}
+.flex-row-12 > div {
+  width: 8.333333333333334%;
 }

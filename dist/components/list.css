@@ -1,5 +1,5 @@
 .w-list {
-  background-color: #fff;
+  background-color: #f4f4f4;
 }
 .w-list > li {
   position: relative;
@@ -7,48 +7,15 @@
 .w-list span {
   display: inline-block;
 }
-.w-list.line > li:not(:last-child) {
-  position: relative;
-}
-.w-list.line > li:not(:last-child):after {
-  display: block;
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: 0 0;
-  pointer-events: none;
-  right: -100%;
-  bottom: -100%;
-  transform: scale(0.5);
-}
-.w-list.line > li:not(:last-child):after {
-  border-bottom: 1px solid #ccc;
-}
-.w-list.link > li:after,
-.w-list.theme-1 > li:after {
-  content: "\E697";
-  font-family: "w-icon" !important;
-  font-size: inherit;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.w-list.theme-1 > li {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-.w-list.theme-1 > li > i {
-  margin-right: 1rem;
-}
 .w-list.padding-0 > li {
   padding: 0rem;
 }
-.w-list.padding-1 > li {
+.w-list.padding-1 > li,
+.w-list.theme-2 > li {
   padding: 0.5rem;
 }
-.w-list.padding-2 > li {
+.w-list.padding-2 > li,
+.w-list.theme-1 > li {
   padding: 1rem;
 }
 .w-list.padding-3 > li {
@@ -68,4 +35,62 @@
 }
 .w-list.padding-8 > li {
   padding: 4rem;
+}
+.w-list.line > li:not(:last-child),
+.w-list.theme-1 > li:not(:last-child) {
+  position: relative;
+}
+.w-list.line > li:not(:last-child):after,
+.w-list.theme-1 > li:not(:last-child):after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+  right: -100%;
+  bottom: -100%;
+  transform: scale(0.5);
+}
+.w-list.line > li:not(:last-child):after,
+.w-list.theme-1 > li:not(:last-child):after {
+  border-bottom: 1px solid #ccc;
+}
+.w-list.link > li:before,
+.w-list.theme-1 > li:before {
+  content: "\E697";
+  font-family: "w-icon" !important;
+  font-size: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+}
+.w-list.flex > li,
+.w-list.theme-1 > li,
+.w-list.theme-2 > li {
+  display: flex;
+  align-items: center;
+}
+.w-list.active > li:active,
+.w-list.theme-1 > li:active {
+  background-color: #f5f5f5;
+}
+.w-list.theme-1 > li > i {
+  margin-right: 1rem;
+}
+.w-list.theme-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.w-list.theme-2 > li {
+  width: 33.333333%;
+}
+.w-list.theme-2 > li > i {
+  margin-right: 1rem;
 }
