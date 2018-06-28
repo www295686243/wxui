@@ -85,5 +85,21 @@
       }
     }
   }
+  // 示例二
+  &.theme-3 {
+    display: flex
+    flex-wrap: wrap
+    @extend .{$prefix}list.active
+    & > li {
+      padding: size(10) 0
+      width: 25%
+      text-align: center
+      & > .icon {
+        & > i {
+          font-size: size(40)  
+        }
+      }
+    }
+  }
 }
 

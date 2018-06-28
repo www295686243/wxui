@@ -78,7 +78,8 @@
   align-items: center;
 }
 .w-list.active > li:active,
-.w-list.theme-1 > li:active {
+.w-list.theme-1 > li:active,
+.w-list.theme-3 > li:active {
   background-color: #f5f5f5;
 }
 .w-list.theme-1 > li > i {
@@ -93,4 +94,16 @@
 }
 .w-list.theme-2 > li > i {
   margin-right: 1rem;
+}
+.w-list.theme-3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.w-list.theme-3 > li {
+  padding: 1rem 0;
+  width: 25%;
+  text-align: center;
+}
+.w-list.theme-3 > li > .icon > i {
+  font-size: 4rem;
 }
