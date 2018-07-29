@@ -53,3 +53,43 @@ bg($background, $color = #fff) {
 size($size) {
   ($size / 10)rem
 }
+
+space($num) {
+  size($num * $space-size-multiple)
+}
+
+spacePadding($num, $location = '') {
+  if ($location == 't' || $location == 'tb') {
+    padding-top: space($num)
+  }
+  if ($location == 'r' || $location == 'lr') {
+    padding-right: space($num)
+  }
+  if ($location == 'b' || $location == 'tb') {
+    padding-bottom: space($num)
+  }
+  if ($location == 'l' || $location == 'lr') {
+    padding-left: space($num)
+  }
+  if ($location == '') {
+    padding: space($num)
+  }
+}
+
+spaceMargin($num, $location = '') {
+  if ($location == 't' || $location == 'tb') {
+    margin-top: space($num)
+  }
+  if ($location == 'r' || $location == 'lr') {
+    margin-right: space($num)
+  }
+  if ($location == 'b' || $location == 'tb') {
+    margin-bottom: space($num)
+  }
+  if ($location == 'l' || $location == 'lr') {
+    margin-left: space($num)
+  }
+  if ($location == '') {
+    margin: space($num)
+  }
+}

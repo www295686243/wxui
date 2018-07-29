@@ -1,5 +1,3 @@
-@import '../common/index.styl'
-
 // 默认列表属性
 .{$prefix}list {
   background-color: $list-bg
@@ -9,48 +7,6 @@
   span {
     display: inline-block
   }
-  // li带内间距的列表
-  for item in range($space-size-min, $space-size-max) {
-    &.padding-{item} {
-      & > li {
-        padding: size(1) * item * $space-size-multiple
-      }  
-    }
-  }
-  // 带下划线的列表
-  &.line {
-    & > li:not(:last-child) {
-      borderAfter()
-      &:after {
-        borderFun($border-color, 'bottom')
-      }
-    }
-  }
-  // 右边箭头
-  &.link {
-    & > li {
-      &:before {
-        content: "\e697"
-        font-family: "w-icon" !important
-        font-size: inherit
-        font-style: normal
-        -webkit-font-smoothing: antialiased
-        -moz-osx-font-smoothing: grayscale
-        position: absolute
-        right: size(10)
-        top: 50%
-        transform: translateY(-50%)
-        font-size: size(14)
-      }  
-    }
-  }
-  // 让li带弹性布局
-  &.flex {
-    & > li {
-      display: flex
-      align-items: center
-    }
-  }
   // 让li带按下效果
   &.active {
     & > li {
@@ -59,47 +15,77 @@
       }  
     }  
   }
-  // 示例一
-  &.theme-1 {
-    @extend .{$prefix}list.link
-    @extend .{$prefix}list.flex
-    @extend .{$prefix}list.line
-    @extend .{$prefix}list.active
-    @extend .{$prefix}list.padding-2
+  li.active {
+    &:active {
+      background-color: $color-active
+    }
+  }
+  // li带内间距的列表
+  for item in range($space-size-min, $space-size-max) {
+    &.padding-{item} {
+      & > li {
+        padding: size(1) * item * $space-size-multiple
+      }  
+    }
+  }
+  // li带下划线的列表
+  &.line {
+    & > li:not(:last-child) {
+      @extend .{$prefix}border-b
+    }
+  }
+  li.line {
+    @extend .{$prefix}border-b
+  }
+  // li里的info带下划线
+  &.info-line {
+    & > li > .info {
+      @extend .{$prefix}border-b
+    }
+  }
+  // ul添加link 所有的li会带右边箭头
+  &.link {
     & > li {
-      & > i {
-        margin-right: size(10)
+      spacePadding(6, 'r')
+      @extend .{$prefix}icon
+      &:before {
+        content: "\e697"
+        position: absolute
+        right: space(2)
+        top: 50%
+        transform: translateY(-50%)
+        font-size: size(14)
+        color: $color-gray
+      }
+      &:active {
+        background-color: $color-active
+      }
+      & > .info {
+        padding-right: 0 !important
       }
     }
   }
-  // 示例二
-  &.theme-2 {
-    display: flex
-    @extend .{$prefix}list.flex
-    @extend .{$prefix}list.padding-1
-    flex-wrap: wrap
-    & > li {
-      width: 33.333333%
-      & > i {
-        margin-right: size(10)
-      }
+  // li添加link 当前li会带右边箭头
+  li.link {
+    spacePadding(5, 'r')
+    @extend .{$prefix}icon
+    &:before {
+      content: "\e697"
+      position: absolute
+      right: space(2)
+      top: 50%
+      transform: translateY(-50%)
+      font-size: size(14)
+      color: $color-gray
     }
-  }
-  // 示例二
-  &.theme-3 {
-    display: flex
-    flex-wrap: wrap
-    @extend .{$prefix}list.active
-    & > li {
-      padding: size(10) 0
-      width: 25%
-      text-align: center
-      & > .icon {
-        & > i {
-          font-size: size(40)  
-        }
-      }
+    &:active {
+      background-color: $color-active
+    }
+    & > .info {
+      padding-right: 0 !important
     }
   }
 }
 
+@import './list/theme-1.styl'
+@import './list/theme-2.styl'

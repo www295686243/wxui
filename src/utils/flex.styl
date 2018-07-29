@@ -2,138 +2,152 @@
   display: flex
   & > div {
     display: flex  
-    & > div {
-      width: 100%  
-    }
+    // & > div {
+    //   width: 100%  
+    // }
   }
-  
-  // 主轴方向：从左到右(默认)
-  &.dir-left {
-    flex-direction: row  
-  }
+}
 
-  // 主轴方向：从右到左
-  &.dir-right {
-    flex-direction: row-reverse
-    -webkit-box-pack: end //修复旧版本主轴和标准主轴flex表现不一致的bug
-  }
+// 主轴方向：从左到右(默认)
+.dir-left {
+  flex-direction: row  
+}
 
-  // 主轴方向：从上到下
-  &.dir-top {
-    flex-direction: column
-  }
+// 主轴方向：从右到左
+.dir-right {
+  flex-direction: row-reverse
+  -webkit-box-pack: end //修复旧版本主轴和标准主轴flex表现不一致的bug
+}
 
-  // 主轴方向：从下到上
-  &.dir-bottom {
-    flex-direction: column-reverse
-    -webkit-box-pack: end //修复旧版本主轴和标准主轴flex表现不一致的bug
-  }
+// 主轴方向：从上到下
+.dir-top {
+  flex-direction: column
+}
 
-  // 主轴对齐方式：从左到右(默认)
-  &.main-left {
-    justify-content: flex-start
-  }
+// 主轴方向：从下到上
+.dir-bottom {
+  flex-direction: column-reverse
+  -webkit-box-pack: end //修复旧版本主轴和标准主轴flex表现不一致的bug
+}
 
-  // 主轴对齐方式：从右到左
-  &.main-right {
-    justify-content: flex-end
-  }
+// 主轴对齐方式：从左到右(默认)
+.main-left {
+  justify-content: flex-start
+}
 
-  // 主轴对齐方式：两端对齐
-  &.main-justify {
-    justify-content: space-between
-  }
+// 主轴对齐方式：从右到左
+.main-right {
+  justify-content: flex-end
+}
 
-  // 主轴对齐方式：居中对齐
-  &.main-center {
-    justify-content: center
-  }
+// 主轴对齐方式：两端对齐
+.main-justify {
+  justify-content: space-between
+}
 
-  // 交叉轴齐方式：从上到下(默认)
-  &.cross-top {
-    align-items: flex-start
-  }
+// 主轴对齐方式：居中对齐
+.main-center {
+  justify-content: center
+}
 
-  // 交叉轴齐方式：从下到上
-  &.cross-bottom {
-    align-items: flex-end
-  }
+// 交叉轴齐方式：从上到下(默认)
+.cross-top {
+  align-items: flex-start
+}
 
-  // 交叉轴齐方式：居中对齐
-  &.cross-center {
-    align-items: center
-  }
+// 交叉轴齐方式：从下到上
+.cross-bottom {
+  align-items: flex-end
+}
 
-  // 交叉轴齐方式：跟随内容高度对齐
-  &.cross-baseline {
-    align-items: baseline
-  }
+// 交叉轴齐方式：居中对齐
+.cross-center {
+  align-items: center
+}
 
-  // 交叉轴齐方式：跟随内容高度对齐
-  &.cross-stretch {
-    align-items: stretch
-  }
+// 交叉轴齐方式：跟随内容高度对齐
+.cross-baseline {
+  align-items: baseline
+}
 
-  // 子元素平分宽度
-  &.box-mean, // 所有元素
-  &.box-first, // 第一个子元素
-  &.box-last, // 最后一个子元素
-  &.box-justify // 两端第一个子元素
-  {
-    & > div {
-      width: 0%
-      height: auto
-      flex-grow: 1
-      flex-shrink: 1
-    }  
-  }
+// 交叉轴齐方式：跟随内容高度对齐
+.cross-stretch {
+  align-items: stretch
+}
 
-  &.box-first > div:first-child, // 第一个子元素
-  &.box-last > div:last-child, // 最后一个子元素
-  &.box-justify > div:first-child, // 两端第一个子元素
-  &.box-justify > div:last-child // 两端最后一个子元素
-  {
+// 子元素平分宽度
+.box-mean, // 所有元素
+.box-first, // 第一个子元素
+.box-last, // 最后一个子元素
+.box-justify // 两端第一个子元素
+{
+   & > div {
+    width: 0%
+    height: auto
+    flex-grow: 1
+    flex-shrink: 1
+  }  
+}
+
+.box-first {
+  & > div:first-child {
     width: auto
     flex-grow: 0
     flex-shrink: 0
   }
+}
 
-  // 子元素平分高度
-  &.dir-top.box-mean,
-  &.dir-top.box-first,
-  &.dir-top.box-last,
-  &.dir-top.box-justify,
-  &.dir-bottom.box-mean,
-  &.dir-bottom.box-first,
-  &.dir-bottom.box-last,
-  &.dir-bottom.box-justify {
-    & > div {
-      width: auto
-      height: 0
-      flex-grow: 1
-      flex-shrink: 1  
-    }
-  }
-  &.dir-top.box-first > div:first-child,
-  &.dir-top.box-last > div:last-child,
-  &.dir-top.box-justify > div:first-child,
-  &.dir-top.box-justify > div:last-child,
-  &.dir-bottom.box-first > div:first-child,
-  &.dir-bottom.box-last > div:last-child,
-  &.dir-bottom.box-justify > div:first-child,
-  &.dir-bottom.box-justify > div:last-child {
-    height: auto
+.box-last {
+  & > div:last-child {
+    width: auto
     flex-grow: 0
     flex-shrink: 0
   }
+}
 
-  // 子元素伸缩比例
-  for item in (0..10) {
-    & > .flex-box-{item} {
-      flex-grow: item
-      flex-shrink: item
-    }  
+.box-justify > div:first-child, // 两端第一个子元素
+.box-justify > div:last-child // 两端最后一个子元素
+{
+  width: auto
+  flex-grow: 0
+  flex-shrink: 0
+}
+
+// 子元素平分高度
+.dir-top.box-mean,
+.dir-top.box-first,
+.dir-top.box-last,
+.dir-top.box-justify,
+.dir-bottom.box-mean,
+.dir-bottom.box-first,
+.dir-bottom.box-last,
+.dir-bottom.box-justify {
+  & > div {
+    width: auto
+    height: 0
+    flex-grow: 1
+    flex-shrink: 1  
   }
+}
+.dir-top.box-first > div:first-child,
+.dir-top.box-last > div:last-child,
+.dir-top.box-justify > div:first-child,
+.dir-top.box-justify > div:last-child,
+.dir-bottom.box-first > div:first-child,
+.dir-bottom.box-last > div:last-child,
+.dir-bottom.box-justify > div:first-child,
+.dir-bottom.box-justify > div:last-child {
+  height: auto
+  flex-grow: 0
+  flex-shrink: 0
+}
+
+// 子元素伸缩比例
+for item in (0..10) {
+  .flex-box-{item} {
+    flex-grow: item
+    flex-shrink: item
+  }  
 }
 
 // 栅格布局

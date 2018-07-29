@@ -1,0 +1,62 @@
+.{$prefix}list {
+  // 实例一
+  &.theme-2 {
+    & > li {
+      @extend .{$prefix}flex
+      @extend .cross-stretch
+      & > .media {
+        spacePadding(2)
+        width: auto
+        flex-grow: 0
+        flex-shrink: 0
+        font-size: 0
+        i {
+          font-size: size(24)
+          align-items: center
+          display: flex
+        }
+      }
+      & > .info {
+        spacePadding(2)
+        width: 0%
+        height: auto
+        flex-grow: 1
+        flex-shrink: 1
+        @extend .dir-top
+        .title {
+          & > div {
+            display: flex
+            @extend .cross-top
+            @extend .main-justify
+            & > .{$prefix}elip-1 + .status,
+            & > .{$prefix}elip-2 + .status {
+              line-height: 1.4
+            }
+          }
+          & > div:not(:last-child) {
+            spacePadding(2, 'b')
+          }
+          @extend .flex-box-1
+        }
+        .other {
+          display: flex
+          @extend .cross-baseline
+          @extend .main-justify
+        }
+        .status {
+          white-space: nowrap
+          spaceMargin(2, 'l')
+          // color: $color-primary
+        }
+        .{$prefix}btn {
+          margin-top: size(2)  
+        }
+      }
+      // 当media存在,info左间距为0
+      & > .media + .info {
+        padding-left: 0
+      }
+    }
+  }
+}
+

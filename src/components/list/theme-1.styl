@@ -1,0 +1,37 @@
+.{$prefix}list {
+  // 实例一
+  &.theme-1 {
+    & > li {
+      @extend .{$prefix}flex
+      @extend .cross-center
+      & > .media {
+        spacePadding(2)
+        width: auto
+        flex-grow: 0
+        flex-shrink: 0
+        i {
+          font-size: size(24)
+        }
+      }
+      & > .info {
+        spacePadding(2)
+        width: 0%
+        height: auto
+        flex-grow: 1
+        flex-shrink: 1
+        @extend .main-justify
+        @extend .cross-center
+        .status {
+          white-space: nowrap
+          spaceMargin(2, 'l')
+          // color: $color-primary
+        }
+      }
+      // 当media存在,info左间距为0
+      & > .media + .info {
+        padding-left: 0
+      }
+    }
+  }
+}
+

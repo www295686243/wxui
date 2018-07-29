@@ -11,13 +11,13 @@ const basePlugins = [
 ]
 
 // 将src目录下所有的js文件都批量匹配加入到entry中
-const glob = require('glob')
-const files = glob.sync('./src/components/*.styl');
+// const glob = require('glob')
+// const files = glob.sync('./src/components/*.styl');
 const entry = {};
-files.forEach(file => {
-  var name = file.match(/src\/(.*?).styl/)[1]
-  entry[name] = file
-});
+// files.forEach(file => {
+//   var name = file.match(/src\/(.*?).styl/)[1]
+//   entry[name] = file
+// });
 entry.wxui = ['./src/index.styl']
 
 module.exports = {

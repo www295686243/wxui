@@ -9,32 +9,46 @@
   borderAfter()
 }
 
-.{$prefix}border:after {
-  borderFun($border-color)
+.{$prefix}border {
+  &:after {
+    borderFun($border-color)  
+  }
 }
 
-.{$prefix}border-t:after {
-  borderFun($border-color, 'top')
+.{$prefix}border-t {
+  &:after {
+    borderFun($border-color, 'top')
+  }
 }
 
-.{$prefix}border-r:after {
-  borderFun($border-color, 'right')
+.{$prefix}border-r {
+  &:after {
+    borderFun($border-color, 'right')
+  }
 }
 
-.{$prefix}border-b:after {
-  borderFun($border-color, 'bottom')
+.{$prefix}border-b {
+  &:after {
+    borderFun($border-color, 'bottom')
+  }
 }
 
-.{$prefix}border-l:after {
-  borderFun($border-color, 'left')
+.{$prefix}border-l {
+  &:after {
+    borderFun($border-color, 'left')
+  }
 }
 
-.{$prefix}border-tb:after {
-  borderFun($border-color, 'top')
-  borderFun($border-color, 'bottom')
+.{$prefix}border-tb {
+  &:after {
+    borderFun($border-color, 'top')
+    borderFun($border-color, 'bottom')  
+  }
 }
 
-.{$prefix}border-lr:after {
-  borderFun($border-color, 'left')
-  borderFun($border-color, 'right')
+.{$prefix}border-lr {
+  &:after {
+    borderFun($border-color, 'left')
+    borderFun($border-color, 'right')    
+  }
 }

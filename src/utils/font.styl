@@ -12,9 +12,9 @@ for item in range($font-size-min, $font-size-max) {
 }
 
 // H标签
-for item in range(1, 8) {
+for item in range(1, 6) {
   h{item} {
-    font-size: size(($font-size-max - item) * 2 + 10)
+    font-size: size(($font-size-max - item) * 2 + 6)
     line-height: 1
     display: inline-block
     font-weight: normal
@@ -35,4 +35,18 @@ for item in range(1, 8) {
 }
 .{$prefix}text-center {
   text-align: center
+}
+
+// 文字截断
+.{$prefix}elip-1 {
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+}
+.{$prefix}elip-2 {
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: 2
+  overflow: hidden
+  line-height: 1.2
 }
