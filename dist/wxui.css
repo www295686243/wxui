@@ -1052,29 +1052,92 @@
 .w-list.padding-0 > li {
   padding: 0rem;
 }
+.w-list.margin-0 {
+  background: #f5f5f5;
+}
+.w-list.margin-0 > li {
+  background: #fff;
+  margin-bottom: 0rem;
+}
 .w-list.padding-1 > li {
   padding: 0.4rem;
+}
+.w-list.margin-1 {
+  background: #f5f5f5;
+}
+.w-list.margin-1 > li {
+  background: #fff;
+  margin-bottom: 0.4rem;
 }
 .w-list.padding-2 > li {
   padding: 0.8rem;
 }
+.w-list.margin-2 {
+  background: #f5f5f5;
+}
+.w-list.margin-2 > li {
+  background: #fff;
+  margin-bottom: 0.8rem;
+}
 .w-list.padding-3 > li {
   padding: 1.2rem;
+}
+.w-list.margin-3 {
+  background: #f5f5f5;
+}
+.w-list.margin-3 > li {
+  background: #fff;
+  margin-bottom: 1.2rem;
 }
 .w-list.padding-4 > li {
   padding: 1.6rem;
 }
+.w-list.margin-4 {
+  background: #f5f5f5;
+}
+.w-list.margin-4 > li {
+  background: #fff;
+  margin-bottom: 1.6rem;
+}
 .w-list.padding-5 > li {
   padding: 2rem;
+}
+.w-list.margin-5 {
+  background: #f5f5f5;
+}
+.w-list.margin-5 > li {
+  background: #fff;
+  margin-bottom: 2rem;
 }
 .w-list.padding-6 > li {
   padding: 2.4rem;
 }
+.w-list.margin-6 {
+  background: #f5f5f5;
+}
+.w-list.margin-6 > li {
+  background: #fff;
+  margin-bottom: 2.4rem;
+}
 .w-list.padding-7 > li {
   padding: 2.8rem;
 }
+.w-list.margin-7 {
+  background: #f5f5f5;
+}
+.w-list.margin-7 > li {
+  background: #fff;
+  margin-bottom: 2.8rem;
+}
 .w-list.padding-8 > li {
   padding: 3.2rem;
+}
+.w-list.margin-8 {
+  background: #f5f5f5;
+}
+.w-list.margin-8 > li {
+  background: #fff;
+  margin-bottom: 3.2rem;
 }
 .w-list.link > li {
   padding-right: 2.4rem;
@@ -1175,6 +1238,9 @@
   margin-top: 0.2rem;
 }
 .w-list.theme-2 > li > .media + .info {
+  padding-left: 0;
+}
+.w-list.theme-2 > li > .info + .media {
   padding-left: 0;
 }
 .w-search {

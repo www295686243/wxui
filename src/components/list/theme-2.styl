@@ -52,8 +52,12 @@
           margin-top: size(2)  
         }
       }
-      // 当media存在,info左间距为0
+      // 当media下面有info，则info的左间距为0
       & > .media + .info {
+        padding-left: 0
+      }
+      // 当info下面有media，则media的左间距为0
+      & > .info + .media {
         padding-left: 0
       }
     }
