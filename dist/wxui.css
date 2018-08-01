@@ -1,11 +1,13 @@
 .w-flex,
 .w-list.theme-1 > li,
-.w-list.theme-2 > li {
+.w-list.theme-2 > li,
+.w-list.theme-3 {
   display: flex;
 }
 .w-flex > div,
 .w-list.theme-1 > li > div,
-.w-list.theme-2 > li > div {
+.w-list.theme-2 > li > div,
+.w-list.theme-3 > div {
   display: flex;
 }
 .dir-left {
@@ -1139,6 +1141,21 @@
   background: #fff;
   margin-bottom: 3.2rem;
 }
+.w-list.padding-small-1 > li {
+  padding: 0.1rem;
+}
+.w-list.padding-small-2 > li {
+  padding: 0.2rem;
+}
+.w-list.padding-small-3 > li {
+  padding: 0.3rem;
+}
+.w-list.padding-small-4 > li {
+  padding: 0.4rem;
+}
+.w-list.padding-small-5 > li {
+  padding: 0.5rem;
+}
 .w-list.link > li {
   padding-right: 2.4rem;
 }
@@ -1237,11 +1254,74 @@
 .w-list.theme-2 > li > .info .w-btn {
   margin-top: 0.2rem;
 }
+.w-list.theme-2 > li > .action.cross-center {
+  padding-right: 0.8rem;
+}
 .w-list.theme-2 > li > .media + .info {
   padding-left: 0;
 }
 .w-list.theme-2 > li > .info + .media {
   padding-left: 0;
+}
+.w-list.theme-3 {
+  flex-wrap: wrap;
+}
+.w-list.theme-3.col-1 > li {
+  width: 100%;
+  font-size: 0;
+}
+.w-list.theme-3.col-1 > li > img {
+  width: 100%;
+}
+.w-list.theme-3.col-2 > li {
+  width: 50%;
+  font-size: 0;
+}
+.w-list.theme-3.col-2 > li > img {
+  width: 100%;
+}
+.w-list.theme-3.col-3 > li {
+  width: 33.333333333333336%;
+  font-size: 0;
+}
+.w-list.theme-3.col-3 > li > img {
+  width: 100%;
+}
+.w-list.theme-3.col-4 > li {
+  width: 25%;
+  font-size: 0;
+}
+.w-list.theme-3.col-4 > li > img {
+  width: 100%;
+}
+.w-list.theme-3.col-5 > li {
+  width: 20%;
+  font-size: 0;
+}
+.w-list.theme-3.col-5 > li > img {
+  width: 100%;
+}
+.w-list.theme-3.col-6 > li {
+  width: 16.666666666666668%;
+  font-size: 0;
+}
+.w-list.theme-3.col-6 > li > img {
+  width: 100%;
+}
+.w-list.theme-3.padding-small-1 {
+  padding: 0.1rem;
+}
+.w-list.theme-3.padding-small-2 {
+  padding: 0.2rem;
+}
+.w-list.theme-3.padding-small-3 {
+  padding: 0.3rem;
+}
+.w-list.theme-3.padding-small-4 {
+  padding: 0.4rem;
+}
+.w-list.theme-3.padding-small-5 {
+  padding: 0.5rem;
 }
 .w-search {
   padding: 0.5rem 0.8rem;

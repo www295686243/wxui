@@ -35,6 +35,14 @@
       }  
     }
   }
+  // li带内间距的列表(小间距)
+  for item in range($space-small-size-min, $space-small-size-max) {
+    &.padding-small-{item} {
+      & > li {
+        padding: size(1) * item * $space-small-size-multiple
+      }  
+    }
+  }
   // li带下划线的列表
   &.line {
     & > li:not(:last-child) {
@@ -96,3 +104,4 @@
 
 @import './list/theme-1.styl'
 @import './list/theme-2.styl'
+@import './list/theme-3.styl'

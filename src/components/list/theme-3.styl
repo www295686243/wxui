@@ -1,0 +1,24 @@
+.{$prefix}list {
+  &.theme-3 {
+    @extend .{$prefix}flex
+    flex-wrap: wrap
+    for item in range(1, 6) {
+      &.col-{item} {
+        & > li {
+          width: (100 / item)%
+          font-size: 0
+          & > img {
+            width: 100%
+          }
+        }
+      }
+    }
+    // 让li带内间距的列表，外层的ul也相应进行间距
+    for item in range($space-small-size-min, $space-small-size-max) {
+      &.padding-small-{item} {
+        padding: size(1) * item * $space-small-size-multiple 
+      }
+    }
+    // 删除
+  }
+}
