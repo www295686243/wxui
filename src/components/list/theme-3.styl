@@ -2,13 +2,18 @@
   &.theme-3 {
     @extend .{$prefix}flex
     flex-wrap: wrap
+    // 均分
     for item in range(1, 6) {
       &.col-{item} {
         & > li {
           width: (100 / item)%
-          font-size: 0
-          & > img {
+          & > div {
+            position: relative  
+          }
+          & > img,
+          & > div > img {
             width: 100%
+            display: block
           }
         }
       }
@@ -19,6 +24,65 @@
         padding: size(1) * item * $space-small-size-multiple 
       }
     }
-    // 删除
+    & > li > div {
+      // 删除
+      & > .delete {
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 2
+        font-size: size(24)
+        color: $color-primary
+      }
+      & > .mask {
+        position: absolute
+        width: 100%
+        bottom: 0
+        left: 0
+        // spacePadding(2)
+        color: $color-white
+        h1,h2,h3,h4,h5,h6{
+          position: relative
+          z-index: 2
+          line-height: 1.4
+        }
+        background: rgba(0, 0, 0, 0.7)
+        & > .theme-2,
+        & > .theme-1 {
+          background-color: transparent
+        }
+      }
+    }
+    
+    // 正方形
+    &.square {
+      & > li > div {
+        width:100%;
+        padding-bottom: 100%;
+        height: 0;
+        position: relative;
+        & > img {
+          position: absolute
+          width: 100%
+          height: 100%
+          object-fit: cover
+          z-index: 1
+        }
+        & > .mask {
+          background-color: rgba(0, 0, 0, 0.7)
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          z-index: 11
+          color: $color-white
+          font-size: 2em
+          display: flex
+          @extend .cross-center
+          @extend .main-center
+        }
+      }
+    }
   }
 }

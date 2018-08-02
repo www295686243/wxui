@@ -22,3 +22,9 @@ for item in range($space-size-min, $space-size-max) {
     padding: size(1 * item * $space-size-multiple)
   }
 }
+
+for item in range($space-small-size-min, $space-small-size-max) {
+  .{$prefix}padding-small-{item} {
+    padding: size(1 * item * $space-small-size-multiple)
+  }
+}
