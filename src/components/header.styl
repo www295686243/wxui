@@ -1,0 +1,39 @@
+.{$prefix}header {
+  color: #fff
+  background-color: $color-primary
+  & > div {
+    @extend .{$prefix}flex
+    @extend .main-justify
+    height: size(50)
+    position: relative
+  }
+  .title {
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      text-align: center
+      width: 100%
+      padding: 0 size(50)
+      align-items: center
+      justify-content: center
+      font-size: size(16)
+  }
+  .left,
+  .right {
+    .{$prefix}btn {
+      border-radius: initial
+    }
+    z-index: 1
+    .{$prefix}icon {
+      font-size: size(18)
+      margin-right: 0
+    }  
+  }
+  .right {
+    span {
+      font-size: size(14)
+    }  
+  }
+}

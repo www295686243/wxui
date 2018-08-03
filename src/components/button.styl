@@ -16,7 +16,7 @@
   borderFun($button-border-color, '', $button-border-size)
   tapColor($button-bg-color)
   color: $button-font-color
-  .iconfont{
+  & > .{$prefix}icon {
     margin-right: size(5)
   }
 }
@@ -57,6 +57,10 @@ for row in ($background-vars) {
 	width: size(50)
 	height: size(50)
 	padding: 0
+	&.small {
+		width: size(30)
+		height: size(30)	
+	}
 }
 
 // 按钮组

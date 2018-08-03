@@ -1,0 +1,22 @@
+.{$prefix}badge {
+  display: inline-block
+  line-height: 1
+  font-size: size(12)
+  border-radius: size(100)
+  white-space: nowrap
+  padding: size(3) size(6)
+  color: $color-white
+  background-color: $color-dot
+}
+
+.{$prefix}dot {
+  display: inline-block
+  line-height: 1
+  background-color: $color-dot
+  padding: size(4)
+  border-radius: size(100)
+}
+.{$prefix}dot-small {
+  @extend .{$prefix}dot
+  padding: size(3)  
+}

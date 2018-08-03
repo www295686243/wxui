@@ -1,50 +1,11 @@
 .{$prefix}radio {
-  position: relative
-  display: inline-block
-  width: size(20)
-  height: size(20)
-  -webkit-appearance: none
-  border: 1px solid $border-color
-  border-radius: 50%
-  transition: all .3s ease
-  &:after {
-    content: " "
-    position: absolute
-    top: 40%
-    left: 50%
-    width: 60%
-    height: 30%
-    transform: translate(-50%, -50%) rotate(-45deg)
-    border-bottom: 1px solid transparent
-    border-left: 1px solid transparent
-  }
-  &:checked {
-    background-color: $color-primary
-    border-color: $color-primary
-    &:after {
-      border-color: #ffffff
-    }
-  }
-  // 直角
-  &.square {
-    border-radius: size(3)
-  }
-  // 背景色
-  for row in ($background-vars) {
-    &.{row} {
-      &:checked {
-        border-color: lookup('$color-' + row)
-        background-color: lookup('$color-' + row)
-      }
-    }
-  }
+  @extend .{$prefix}checkbox
 }
 
 radio($size, $class) {
   .{$prefix}radio-{$class} {
     @extend .{$prefix}radio
-    width: $size
-    height: $size
+    font-size: $size
   }
 }
 

@@ -1,0 +1,29 @@
+.{$prefix}footer {
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  text-align: center
+  z-index: 11
+  & > div {
+    display: flex
+    height: size(50)
+    overflow: hidden
+    background: #ffffff
+    & > .{$prefix}btn {
+      border-color: transparent
+      border-radius: initial
+      width: auto
+      flex-grow: 1
+      flex-shrink: 1
+      & .{$prefix}icon {
+        margin-right: 0
+        font-size: size(18)
+      }
+      &.auto {
+        flex-grow: 0
+        flex-shrink: 0
+      }
+    }
+  }
+}
