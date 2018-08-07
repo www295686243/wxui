@@ -1663,26 +1663,33 @@
   flex-grow: 0;
   flex-shrink: 0;
 }
+.w-footer .w-btn .w-badge {
+  position: absolute;
+  left: 50%;
+  top: 0.3rem;
+}
 .w-badge {
   display: inline-block;
-  line-height: 1;
-  font-size: 1.2rem;
-  border-radius: 10rem;
+  line-height: 18px;
+  height: 18px;
+  font-size: 12px;
+  border-radius: 12px;
   white-space: nowrap;
-  padding: 0.3rem 0.6rem;
+  padding: 0 5px;
   color: #fff;
   background-color: #e33;
+  text-rendering: optimizeLegibility;
 }
 .w-dot,
 .w-dot-small {
   display: inline-block;
   line-height: 1;
   background-color: #e33;
-  padding: 0.4rem;
-  border-radius: 10rem;
+  padding: 4px;
+  border-radius: 100px;
 }
 .w-dot-small {
-  padding: 0.3rem;
+  padding: 3px;
 }
 *,
 *:before,
@@ -1694,10 +1701,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 62.5%;
-}
-html,
-body {
-  height: 100%;
 }
 body {
   color: #333;
