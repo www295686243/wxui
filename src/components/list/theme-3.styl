@@ -1,6 +1,6 @@
 .{$prefix}list {
   &.theme-3 {
-    @extend .{$prefix}flex
+    display: flex
     flex-wrap: wrap
     // 均分
     for item in range(1, 6) {
@@ -79,8 +79,8 @@
           color: $color-white
           font-size: 2em
           display: flex
-          @extend .cross-center
-          @extend .main-center
+          align-items: center
+          justify-content: center
         }
       }
     }
