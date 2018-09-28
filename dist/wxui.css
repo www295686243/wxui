@@ -1,15 +1,5 @@
 .w-flex,
-.w-list.theme-1 > li,
-.w-list.theme-2 > li,
-.w-list.theme-3,
 .w-header > div {
-  display: flex;
-}
-.w-flex > div,
-.w-list.theme-1 > li > div,
-.w-list.theme-2 > li > div,
-.w-list.theme-3 > div,
-.w-header > div > div {
   display: flex;
 }
 .dir-left {
@@ -19,8 +9,7 @@
   flex-direction: row-reverse;
   -webkit-box-pack: end;
 }
-.dir-top,
-.w-list.theme-2 > li > .info {
+.dir-top {
   flex-direction: column;
 }
 .dir-bottom {
@@ -34,35 +23,25 @@
   justify-content: flex-end;
 }
 .main-justify,
-.w-list.theme-1 > li > .info,
-.w-list.theme-2 > li > .info .title > div,
-.w-list.theme-2 > li > .info .other,
 .w-header > div {
   justify-content: space-between;
 }
-.main-center,
-.w-list.theme-3.square > li > div > .mask {
+.main-center {
   justify-content: center;
 }
-.cross-top,
-.w-list.theme-2 > li > .info .title > div {
+.cross-top {
   align-items: flex-start;
 }
 .cross-bottom {
   align-items: flex-end;
 }
-.cross-center,
-.w-list.theme-1 > li,
-.w-list.theme-1 > li > .info,
-.w-list.theme-3.square > li > div > .mask {
+.cross-center {
   align-items: center;
 }
-.cross-baseline,
-.w-list.theme-2 > li > .info .other {
+.cross-baseline {
   align-items: baseline;
 }
-.cross-stretch,
-.w-list.theme-2 > li {
+.cross-stretch {
   align-items: stretch;
 }
 .box-mean > div,
@@ -119,8 +98,7 @@
   flex-grow: 0;
   flex-shrink: 0;
 }
-.flex-box-1,
-.w-list.theme-2 > li > .info .title {
+.flex-box-1 {
   flex-grow: 1;
   flex-shrink: 1;
 }
@@ -276,12 +254,14 @@
 .w-list.link > li,
 .w-list li.link {
   font-family: "w-icon" !important;
-  font-size: inherit;
-  font-style: normal;
-  line-height: 1;
-  display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+i.w-icon {
+  display: inline-block;
+  line-height: 1;
+  font-style: normal;
+  font-size: inherit;
 }
 .icon-loading2:before {
   content: "\E61D";
@@ -1172,6 +1152,10 @@
 .w-list li.link > .info {
   padding-right: 0 !important;
 }
+.w-list.theme-1 > li {
+  display: flex;
+  align-items: center;
+}
 .w-list.theme-1 > li > .media {
   padding: 0.8rem;
   width: auto;
@@ -1187,6 +1171,8 @@
   height: auto;
   flex-grow: 1;
   flex-shrink: 1;
+  justify-content: space-between;
+  align-items: center;
 }
 .w-list.theme-1 > li > .info .status {
   white-space: nowrap;
@@ -1194,6 +1180,10 @@
 }
 .w-list.theme-1 > li > .media + .info {
   padding-left: 0;
+}
+.w-list.theme-2 > li {
+  display: flex;
+  align-items: stretch;
 }
 .w-list.theme-2 > li > .media {
   padding: 0.8rem;
@@ -1208,24 +1198,36 @@
   display: flex;
 }
 .w-list.theme-2 > li > .info {
+  display: flex;
   padding: 0.8rem;
   width: 0%;
   height: auto;
   flex-grow: 1;
   flex-shrink: 1;
+  flex-direction: column;
+}
+.w-list.theme-2 > li > .info .title {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 .w-list.theme-2 > li > .info .title > div {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.w-list.theme-2 > li > .info .title > div > .w-elip-1 + .status,
-.w-list.theme-2 > li > .info .title > div > .w-elip-2 + .status {
+.w-list.theme-2 > li > .info .title > div > .w-elip-1 + .status {
   line-height: 1.4;
+}
+.w-list.theme-2 > li > .info .title > div > .w-elip-2 + .status {
+  line-height: 1.8;
 }
 .w-list.theme-2 > li > .info .title > div:not(:last-child) {
   padding-bottom: 0.8rem;
 }
 .w-list.theme-2 > li > .info .other {
   display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .w-list.theme-2 > li > .info .status {
   white-space: nowrap;
@@ -1233,6 +1235,9 @@
 }
 .w-list.theme-2 > li > .info .w-btn {
   margin-top: 0.2rem;
+}
+.w-list.theme-2 > li > .action {
+  display: flex;
 }
 .w-list.theme-2 > li > .action.cross-center {
   padding-right: 0.8rem;
@@ -1244,6 +1249,7 @@
   padding-left: 0;
 }
 .w-list.theme-3 {
+  display: flex;
   flex-wrap: wrap;
 }
 .w-list.theme-3.col-1 > li {
@@ -1381,6 +1387,8 @@
   color: #fff;
   font-size: 2em;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .w-search {
   padding: 0.5rem 0.8rem;
@@ -2013,7 +2021,7 @@ h6 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 .w-margin-lr-0 {
   margin-left: 0rem;

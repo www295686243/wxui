@@ -2,8 +2,8 @@
   // 实例一
   &.theme-1 {
     & > li {
-      @extend .{$prefix}flex
-      @extend .cross-center
+      display: flex
+      align-items: center
       & > .media {
         spacePadding(2)
         width: auto
@@ -19,8 +19,8 @@
         height: auto
         flex-grow: 1
         flex-shrink: 1
-        @extend .main-justify
-        @extend .cross-center
+        justify-content: space-between
+        align-items: center
         .status {
           white-space: nowrap
           spaceMargin(2, 'l')

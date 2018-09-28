@@ -2,8 +2,8 @@
   // 实例一
   &.theme-2 {
     & > li {
-      @extend .{$prefix}flex
-      @extend .cross-stretch
+      display: flex
+      align-items: stretch
       & > .media {
         spacePadding(2)
         width: auto
@@ -17,31 +17,35 @@
         }
       }
       & > .info {
+        display: flex
         spacePadding(2)
         width: 0%
         height: auto
         flex-grow: 1
         flex-shrink: 1
-        @extend .dir-top
+        flex-direction: column
         .title {
           & > div {
             display: flex
-            @extend .cross-top
-            @extend .main-justify
-            & > .{$prefix}elip-1 + .status,
-            & > .{$prefix}elip-2 + .status {
+            align-items: flex-start
+            justify-content: space-between
+            & > .{$prefix}elip-1 + .status {
               line-height: 1.4
+            }
+            & > .{$prefix}elip-2 + .status {
+              line-height: 1.8
             }
           }
           & > div:not(:last-child) {
             spacePadding(2, 'b')
           }
-          @extend .flex-box-1
+          flex-grow: 1
+          flex-shrink: 1
         }
         .other {
           display: flex
-          @extend .cross-baseline
-          @extend .main-justify
+          align-items: baseline
+          justify-content: space-between
         }
         .status {
           white-space: nowrap
@@ -53,6 +57,7 @@
         }
       }
       & > .action {
+        display: flex
         &.cross-center {
           spacePadding(2, 'r')
         }
