@@ -1451,11 +1451,13 @@ i.w-icon {
   flex-shrink: 1;
 }
 .w-tab,
-.w-tab-simple {
+.w-tab-simple,
+.w-tab-line {
   display: flex;
 }
 .w-tab button,
-.w-tab-simple button {
+.w-tab-simple button,
+.w-tab-line button {
   border-radius: 0;
   border: 0;
   flex-grow: 1;
@@ -1537,50 +1539,83 @@ i.w-icon {
 .w-tab.white button.active {
   color: #fff;
 }
-.w-tab-simple {
-  border-bottom: 1px solid #ddd;
-}
 .w-tab-simple.primary button.active {
   color: #f8504f;
-  border-bottom: 2px solid #f8504f;
 }
 .w-tab-simple.sub button.active {
   color: #0ae;
-  border-bottom: 2px solid #0ae;
 }
 .w-tab-simple.dot button.active {
   color: #e33;
-  border-bottom: 2px solid #e33;
 }
 .w-tab-simple.success button.active {
   color: #1fb922;
-  border-bottom: 2px solid #1fb922;
 }
 .w-tab-simple.error button.active {
   color: #f8504f;
-  border-bottom: 2px solid #f8504f;
 }
 .w-tab-simple.danger button.active {
   color: #ef4f4f;
-  border-bottom: 2px solid #ef4f4f;
 }
 .w-tab-simple.warning button.active {
   color: #ffb400;
-  border-bottom: 2px solid #ffb400;
 }
 .w-tab-simple.yellow button.active {
   color: #f60;
-  border-bottom: 2px solid #f60;
 }
 .w-tab-simple.blue button.active {
   color: #0ae;
-  border-bottom: 2px solid #0ae;
 }
 .w-tab-simple.green button.active {
   color: #2c7;
-  border-bottom: 2px solid #2c7;
 }
 .w-tab-simple.white button.active {
+  color: #fff;
+}
+.w-tab-line {
+  border-bottom: 1px solid #ddd;
+}
+.w-tab-line.primary button.active {
+  color: #f8504f;
+  border-bottom: 2px solid #f8504f;
+}
+.w-tab-line.sub button.active {
+  color: #0ae;
+  border-bottom: 2px solid #0ae;
+}
+.w-tab-line.dot button.active {
+  color: #e33;
+  border-bottom: 2px solid #e33;
+}
+.w-tab-line.success button.active {
+  color: #1fb922;
+  border-bottom: 2px solid #1fb922;
+}
+.w-tab-line.error button.active {
+  color: #f8504f;
+  border-bottom: 2px solid #f8504f;
+}
+.w-tab-line.danger button.active {
+  color: #ef4f4f;
+  border-bottom: 2px solid #ef4f4f;
+}
+.w-tab-line.warning button.active {
+  color: #ffb400;
+  border-bottom: 2px solid #ffb400;
+}
+.w-tab-line.yellow button.active {
+  color: #f60;
+  border-bottom: 2px solid #f60;
+}
+.w-tab-line.blue button.active {
+  color: #0ae;
+  border-bottom: 2px solid #0ae;
+}
+.w-tab-line.green button.active {
+  color: #2c7;
+  border-bottom: 2px solid #2c7;
+}
+.w-tab-line.white button.active {
   color: #fff;
   border-bottom: 2px solid #fff;
 }

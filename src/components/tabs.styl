@@ -1,5 +1,6 @@
 .{$prefix}tab,
-.{$prefix}tab-simple {
+.{$prefix}tab-simple,
+.{$prefix}tab-line {
 		display: flex
     button {
 			border-radius: 0
@@ -35,6 +36,20 @@
 
 // 简洁风格
 .{$prefix}tab-simple {
+		// borderFun($button-border-color, 'bottom')
+		// 背景色
+		for row in ($background-vars) {
+			&.{row} {
+				button.active {
+					color: lookup('$color-' + row)
+					// borderFun(lookup('$color-' + row), 'bottom', 2px)
+				}
+			}
+		}
+}
+
+// 下划线风格
+.{$prefix}tab-line {
 		borderFun($button-border-color, 'bottom')
 		// 背景色
 		for row in ($background-vars) {
