@@ -18,6 +18,7 @@
   color: $button-font-color
   & > .{$prefix}icon {
     margin-right: size(5)
+		vertical-align: middle
   }
 }
 
@@ -33,6 +34,11 @@ for row in ($background-vars) {
 // 直角
 .{$prefix}btn.straight {
 	border-radius: initial
+}
+
+// 无边框
+.{$prefix}btn.link {
+	border: 0
 }
 
 // 块状

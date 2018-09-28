@@ -2,26 +2,40 @@
   color: #fff
   background-color: $color-primary
   & > div {
-    @extend .{$prefix}flex
-    @extend .main-justify
+    display: flex
+    justify-content: space-between
+    align-items: center
     height: size(50)
     position: relative
   }
+  .{$prefix}search {
+    height: size(40)
+    flex-grow: 1
+    flex-shrink: 1
+    background-color: transparent
+    .cancel {
+      button {
+        tapColor($color-white)
+      }
+    }
+  }
   .title {
-      position: absolute
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
-      text-align: center
-      width: 100%
-      padding: 0 size(50)
-      align-items: center
-      justify-content: center
-      font-size: size(16)
+    display: flex
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    text-align: center
+    width: 100%
+    padding: 0 size(50)
+    align-items: center
+    justify-content: center
+    font-size: size(16)
   }
   .left,
   .right {
+    display: flex
     .{$prefix}btn {
       border-radius: initial
     }
