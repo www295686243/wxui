@@ -1,181 +1,3 @@
-.w-flex,
-.w-footer > div {
-  display: flex;
-}
-.dir-left {
-  flex-direction: row;
-}
-.dir-right {
-  flex-direction: row-reverse;
-  -webkit-box-pack: end;
-}
-.dir-top {
-  flex-direction: column;
-}
-.dir-bottom {
-  flex-direction: column-reverse;
-  -webkit-box-pack: end;
-}
-.main-left {
-  justify-content: flex-start;
-}
-.main-right {
-  justify-content: flex-end;
-}
-.main-justify {
-  justify-content: space-between;
-}
-.main-center {
-  justify-content: center;
-}
-.cross-top {
-  align-items: flex-start;
-}
-.cross-bottom {
-  align-items: flex-end;
-}
-.cross-center {
-  align-items: center;
-}
-.cross-baseline {
-  align-items: baseline;
-}
-.cross-stretch {
-  align-items: stretch;
-}
-.box-mean > div,
-.box-first > div,
-.box-last > div,
-.box-justify > div {
-  width: 0%;
-  height: auto;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-.box-first > div:first-child {
-  width: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.box-last > div:last-child {
-  width: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.box-justify > div:first-child,
-.box-justify > div:last-child {
-  width: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.dir-top.box-mean > div,
-.dir-top.box-first > div,
-.dir-top.box-last > div,
-.dir-top.box-justify > div,
-.dir-bottom.box-mean > div,
-.dir-bottom.box-first > div,
-.dir-bottom.box-last > div,
-.dir-bottom.box-justify > div {
-  width: auto;
-  height: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-.dir-top.box-first > div:first-child,
-.dir-top.box-last > div:last-child,
-.dir-top.box-justify > div:first-child,
-.dir-top.box-justify > div:last-child,
-.dir-bottom.box-first > div:first-child,
-.dir-bottom.box-last > div:last-child,
-.dir-bottom.box-justify > div:first-child,
-.dir-bottom.box-justify > div:last-child {
-  height: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.flex-box-0 {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.flex-box-1 {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-.flex-box-2 {
-  flex-grow: 2;
-  flex-shrink: 2;
-}
-.flex-box-3 {
-  flex-grow: 3;
-  flex-shrink: 3;
-}
-.flex-box-4 {
-  flex-grow: 4;
-  flex-shrink: 4;
-}
-.flex-box-5 {
-  flex-grow: 5;
-  flex-shrink: 5;
-}
-.flex-box-6 {
-  flex-grow: 6;
-  flex-shrink: 6;
-}
-.flex-box-7 {
-  flex-grow: 7;
-  flex-shrink: 7;
-}
-.flex-box-8 {
-  flex-grow: 8;
-  flex-shrink: 8;
-}
-.flex-box-9 {
-  flex-grow: 9;
-  flex-shrink: 9;
-}
-.flex-box-10 {
-  flex-grow: 10;
-  flex-shrink: 10;
-}
-.flex-wrap {
-  flex-wrap: wrap;
-}
-.flex-row-1 > div {
-  width: 100%;
-}
-.flex-row-2 > div {
-  width: 50%;
-}
-.flex-row-3 > div {
-  width: 33.333333333333336%;
-}
-.flex-row-4 > div {
-  width: 25%;
-}
-.flex-row-5 > div {
-  width: 20%;
-}
-.flex-row-6 > div {
-  width: 16.666666666666668%;
-}
-.flex-row-7 > div {
-  width: 14.285714285714286%;
-}
-.flex-row-8 > div {
-  width: 12.5%;
-}
-.flex-row-9 > div {
-  width: 11.11111111111111%;
-}
-.flex-row-10 > div {
-  width: 10%;
-}
-.flex-row-11 > div {
-  width: 9.090909090909092%;
-}
-.flex-row-12 > div {
-  width: 8.333333333333334%;
-}
 .w-border,
 .w-border-tb,
 .w-border-lr,
@@ -1805,6 +1627,7 @@ i.w-icon {
   z-index: 11;
 }
 .w-footer > div {
+  display: flex;
   height: 50px;
   overflow: hidden;
   background: #fff;
@@ -2000,6 +1823,183 @@ textarea {
   -moz-appearance: none;
   overflow: auto;
   resize: none;
+}
+.w-flex {
+  display: flex;
+}
+.dir-left {
+  flex-direction: 'body' !important;
+}
+.dir-right {
+  flex-direction: row-reverse !important;
+  -webkit-box-pack: end !important;
+}
+.dir-top {
+  flex-direction: column !important;
+}
+.dir-bottom {
+  flex-direction: column-reverse !important;
+  -webkit-box-pack: end !important;
+}
+.main-left {
+  justify-content: flex-start !important;
+}
+.main-right {
+  justify-content: flex-end !important;
+}
+.main-justify {
+  justify-content: space-between !important;
+}
+.main-center {
+  justify-content: center !important;
+}
+.cross-top {
+  align-items: flex-start !important;
+}
+.cross-bottom {
+  align-items: flex-end !important;
+}
+.cross-center {
+  align-items: center !important;
+}
+.cross-baseline {
+  align-items: baseline !important;
+}
+.cross-stretch {
+  align-items: stretch !important;
+}
+.box-mean > div,
+.box-first > div,
+.box-last > div,
+.box-justify > div {
+  width: 0%;
+  height: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.box-first > div:first-child {
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.box-last > div:last-child {
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.box-justify > div:first-child,
+.box-justify > div:last-child {
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.dir-top.box-mean > div,
+.dir-top.box-first > div,
+.dir-top.box-last > div,
+.dir-top.box-justify > div,
+.dir-bottom.box-mean > div,
+.dir-bottom.box-first > div,
+.dir-bottom.box-last > div,
+.dir-bottom.box-justify > div {
+  width: auto;
+  height: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.dir-top.box-first > div:first-child,
+.dir-top.box-last > div:last-child,
+.dir-top.box-justify > div:first-child,
+.dir-top.box-justify > div:last-child,
+.dir-bottom.box-first > div:first-child,
+.dir-bottom.box-last > div:last-child,
+.dir-bottom.box-justify > div:first-child,
+.dir-bottom.box-justify > div:last-child {
+  height: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.flex-box-0 {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.flex-box-1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.flex-box-2 {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+.flex-box-3 {
+  flex-grow: 3;
+  flex-shrink: 3;
+}
+.flex-box-4 {
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+.flex-box-5 {
+  flex-grow: 5;
+  flex-shrink: 5;
+}
+.flex-box-6 {
+  flex-grow: 6;
+  flex-shrink: 6;
+}
+.flex-box-7 {
+  flex-grow: 7;
+  flex-shrink: 7;
+}
+.flex-box-8 {
+  flex-grow: 8;
+  flex-shrink: 8;
+}
+.flex-box-9 {
+  flex-grow: 9;
+  flex-shrink: 9;
+}
+.flex-box-10 {
+  flex-grow: 10;
+  flex-shrink: 10;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row-1 > div {
+  width: 100%;
+}
+.flex-row-2 > div {
+  width: 50%;
+}
+.flex-row-3 > div {
+  width: 33.333333333333336%;
+}
+.flex-row-4 > div {
+  width: 25%;
+}
+.flex-row-5 > div {
+  width: 20%;
+}
+.flex-row-6 > div {
+  width: 16.666666666666668%;
+}
+.flex-row-7 > div {
+  width: 14.285714285714286%;
+}
+.flex-row-8 > div {
+  width: 12.5%;
+}
+.flex-row-9 > div {
+  width: 11.11111111111111%;
+}
+.flex-row-10 > div {
+  width: 10%;
+}
+.flex-row-11 > div {
+  width: 9.090909090909092%;
+}
+.flex-row-12 > div {
+  width: 8.333333333333334%;
 }
 .w-bg-primary {
   background-color: #f34;
