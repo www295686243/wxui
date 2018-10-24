@@ -28,7 +28,7 @@
       }  
     }
     &.margin-{item} {
-      background: $body-bg
+      // background: $body-bg
       & > li {
         background: $list-bg
         margin-bottom: size(1) * item * $space-size-multiple
@@ -98,6 +98,25 @@
     }
     & > .info {
       padding-right: 0 !important
+    }
+  }
+  // ul添加border 所有li都带边框
+  &.border {
+    & > li {
+      borderAfter()
+      &:after {
+        borderFun($border-color)
+      }
+    }
+  }
+  // ul添加radius 所有li都带圆角
+  for item in range($radius-size-min, $radius-size-max) {
+    &.radius-{item} {
+      & > li {
+        &:after {
+          border-radius: size(2 * item * $radius-size-multiple)  
+        }
+      }
     }
   }
 }

@@ -43,7 +43,7 @@ tapColor($color, $opacity = .9) {
 
 bg($background, $color = #fff) {
   background-color: $background
-  if ($background == #ffffff) {
+  if ($background == #ffffff || $background == #f7f7f7) {
     color: $font-color
   } else {
     color: $color
@@ -51,7 +51,7 @@ bg($background, $color = #fff) {
 }
 
 size($size) {
-  ($size / 12)rem
+  ($size)px
 }
 
 space($num) {
@@ -92,4 +92,5 @@ spaceMargin($num, $location = '') {
   if ($location == '') {
     margin: space($num)
   }
+  ($size)px
 }

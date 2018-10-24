@@ -1,6 +1,6 @@
 {
-  "name": "wxui",
-  "version": "0.0.1",
+  "name": "wxcss",
+  "version": "0.0.4",
   "description": "a mobile ui framework",
   "scripts": {
     "dev": "webpack --watch",
@@ -16,6 +16,11 @@
     "css framework",
     "css ui"
   ],
+  "main": "dist/wxui.css",
+  "files": [
+    "dist",
+    "src"
+  ],
   "author": "万鑫",
   "license": "ISC",
   "bugs": {
@@ -29,6 +34,8 @@
     "file-loader": "^1.1.11",
     "glob": "^7.1.2",
     "html-webpack-plugin": "^2.30.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
     "style-loader": "^0.19.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",

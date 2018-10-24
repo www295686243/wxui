@@ -5,7 +5,7 @@ $prefix = 'w-'
 $z-index        = 1 // 定位的默认层级
 
 // 主要颜色 应用于文字、背景、边框等
-$color-primary     = #f8504f // 主色
+$color-primary     = #ff3344 // 主色
 $color-sub         = #00aaee // 辅色
 $color-dot         = #ee3333 // 点缀色
 $color-success     = #1fb922 // 成功
@@ -14,6 +14,7 @@ $color-danger      = #EF4F4F // 危险
 $color-warning     = #FFB400 // 警告
 $color-disabled    = #cccccc // 禁用
 $color-active      = #f5f5f5 // 按下颜色
+$color-body        = #f7f7f7 // 按下颜色
 
 // 补充色
 $color-gray        = #999999 // 灰色
@@ -39,12 +40,12 @@ $space-small-size-min        = 1
 $space-small-size-multiple   = 1
 
 // 对外开放的背景颜色
-$background-vars = 'primary' 'sub' 'dot' 'success' 'error' 'danger' 'warning' 'yellow' 'blue' 'green' 'white'
+$background-vars = 'primary' 'sub' 'dot' 'success' 'error' 'danger' 'warning' 'yellow' 'blue' 'green' 'white' 'body'
 // 对外开放的文字颜色
 $font-color-vars = 'primary' 'sub' 'dot' 'success' 'error' 'danger' 'warning' 'yellow' 'blue' 'green' 'gray' 'disabled' 'white' 'darkgray'
 
 // body
-$body-bg       = #f7f7f7 // 页面默认背景
+$body-bg       = $color-body // 页面默认背景
 $body-family   = "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif // 默认字体
 
 // button
@@ -60,6 +61,11 @@ $button-radius                = size(5) // 默认圆角大小
 
 // border
 $border-color                 = #cccccc // 边框默认颜色
+
+// radius
+$radius-size-max              = 8
+$radius-size-min              = 0
+$radius-size-multiple         = 4 // 倍数
 
 // list
 $list-bg         = #ffffff // 默认背景色

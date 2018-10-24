@@ -13,26 +13,40 @@
     .textarea {
       display: block  
     }
-  }
-  .label {
-    white-space: nowrap
-    text-align: right
-    font-size: size(14)
-    padding: size(10) size(5) size(10) size(10)
-  }
-  .action {
-    button {
-      border: 0
-      border-radius: 0
-      height: 100%
+    .label {
+      white-space: nowrap
+      text-align: right
+      font-size: size(14)
+      padding: size(10) size(5) size(10) size(10)
     }
-    span {
-      padding: 0 size(10)
+    .action {
+      position: relative
+      button {
+        border: 0
+        border-radius: 0
+        height: 100%
+      }
+      span {
+        padding: 0 size(10)
+      }
+    }
+    .label,
+    .action,
+    .input {
+      align-items: center
     }
   }
-  .label,
-  .action,
-  .input {
-    align-items: center
+  // ul添加radius 所有li都带圆角
+  for item in range($radius-size-min, $radius-size-max) {
+    &.radius-{item} {
+      & > li {
+        .action {
+          button {
+            border-top-right-radius: size(1 * item * $radius-size-multiple)
+            border-bottom-right-radius: size(1 * item * $radius-size-multiple)
+          }  
+        }
+      }
+    }
   }
 }
