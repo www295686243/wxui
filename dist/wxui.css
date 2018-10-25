@@ -303,6 +303,7 @@ i.w-icon {
   border: 1px solid #ddd;
   background-color: transparent;
   color: #333;
+  line-height: 1;
 }
 .w-btn:active {
   background-color: #f5f5f5;
@@ -310,6 +311,9 @@ i.w-icon {
 .w-btn > .w-icon {
   margin-right: 5px;
   vertical-align: middle;
+}
+.w-btn > .loading {
+  margin-right: 5px;
 }
 .w-btn.primary {
   border-color: #f34;
@@ -464,6 +468,10 @@ i.w-icon {
 }
 .w-btn.big {
   padding: 8px 24px;
+}
+.w-btn.tag {
+  padding: 3px 4px;
+  margin-left: 4px;
 }
 .w-btn.circle {
   border-radius: 50%;
@@ -1020,7 +1028,7 @@ i.w-icon {
   padding: 5px;
 }
 .w-list.link > li {
-  padding-right: 24px;
+  padding-right: 28px;
 }
 .w-list.link > li:before {
   content: "\E697";
@@ -1038,7 +1046,7 @@ i.w-icon {
   padding-right: 0 !important;
 }
 .w-list li.link {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 .w-list li.link:before {
   content: "\E697";
@@ -2163,33 +2171,33 @@ textarea {
 }
 h1 {
   font-size: 20px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
 }
 h2 {
   font-size: 18px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
 }
 h3 {
   font-size: 16px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
 }
 h4 {
   font-size: 14px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
 }
 h5 {
   font-size: 12px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
 }
 h6 {
   font-size: 10px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
 }
 .w-color-default {
   color: #333;
@@ -2226,6 +2234,18 @@ h6 {
 .w-margin-0 {
   margin: 0px;
 }
+.w-margin-t-0 {
+  margin-top: 0px;
+}
+.w-margin-r-0 {
+  margin-right: 0px;
+}
+.w-margin-l-0 {
+  margin-left: 0px;
+}
+.w-margin-b-0 {
+  margin-bottom: 0px;
+}
 .w-padding-lr-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2247,6 +2267,18 @@ h6 {
 }
 .w-margin-1 {
   margin: 4px;
+}
+.w-margin-t-1 {
+  margin-top: 4px;
+}
+.w-margin-r-1 {
+  margin-right: 4px;
+}
+.w-margin-l-1 {
+  margin-left: 4px;
+}
+.w-margin-b-1 {
+  margin-bottom: 4px;
 }
 .w-padding-lr-1 {
   padding-left: 4px;
@@ -2270,6 +2302,18 @@ h6 {
 .w-margin-2 {
   margin: 8px;
 }
+.w-margin-t-2 {
+  margin-top: 8px;
+}
+.w-margin-r-2 {
+  margin-right: 8px;
+}
+.w-margin-l-2 {
+  margin-left: 8px;
+}
+.w-margin-b-2 {
+  margin-bottom: 8px;
+}
 .w-padding-lr-2 {
   padding-left: 8px;
   padding-right: 8px;
@@ -2291,6 +2335,18 @@ h6 {
 }
 .w-margin-3 {
   margin: 12px;
+}
+.w-margin-t-3 {
+  margin-top: 12px;
+}
+.w-margin-r-3 {
+  margin-right: 12px;
+}
+.w-margin-l-3 {
+  margin-left: 12px;
+}
+.w-margin-b-3 {
+  margin-bottom: 12px;
 }
 .w-padding-lr-3 {
   padding-left: 12px;
@@ -2314,6 +2370,18 @@ h6 {
 .w-margin-4 {
   margin: 16px;
 }
+.w-margin-t-4 {
+  margin-top: 16px;
+}
+.w-margin-r-4 {
+  margin-right: 16px;
+}
+.w-margin-l-4 {
+  margin-left: 16px;
+}
+.w-margin-b-4 {
+  margin-bottom: 16px;
+}
 .w-padding-lr-4 {
   padding-left: 16px;
   padding-right: 16px;
@@ -2335,6 +2403,18 @@ h6 {
 }
 .w-margin-5 {
   margin: 20px;
+}
+.w-margin-t-5 {
+  margin-top: 20px;
+}
+.w-margin-r-5 {
+  margin-right: 20px;
+}
+.w-margin-l-5 {
+  margin-left: 20px;
+}
+.w-margin-b-5 {
+  margin-bottom: 20px;
 }
 .w-padding-lr-5 {
   padding-left: 20px;
@@ -2358,6 +2438,18 @@ h6 {
 .w-margin-6 {
   margin: 24px;
 }
+.w-margin-t-6 {
+  margin-top: 24px;
+}
+.w-margin-r-6 {
+  margin-right: 24px;
+}
+.w-margin-l-6 {
+  margin-left: 24px;
+}
+.w-margin-b-6 {
+  margin-bottom: 24px;
+}
 .w-padding-lr-6 {
   padding-left: 24px;
   padding-right: 24px;
@@ -2380,6 +2472,18 @@ h6 {
 .w-margin-7 {
   margin: 28px;
 }
+.w-margin-t-7 {
+  margin-top: 28px;
+}
+.w-margin-r-7 {
+  margin-right: 28px;
+}
+.w-margin-l-7 {
+  margin-left: 28px;
+}
+.w-margin-b-7 {
+  margin-bottom: 28px;
+}
 .w-padding-lr-7 {
   padding-left: 28px;
   padding-right: 28px;
@@ -2401,6 +2505,18 @@ h6 {
 }
 .w-margin-8 {
   margin: 32px;
+}
+.w-margin-t-8 {
+  margin-top: 32px;
+}
+.w-margin-r-8 {
+  margin-right: 32px;
+}
+.w-margin-l-8 {
+  margin-left: 32px;
+}
+.w-margin-b-8 {
+  margin-bottom: 32px;
 }
 .w-padding-lr-8 {
   padding-left: 32px;

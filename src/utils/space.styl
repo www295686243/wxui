@@ -10,6 +10,18 @@ for item in range($space-size-min, $space-size-max) {
   .{$prefix}margin-{item} {
     margin: size(1 * item * $space-size-multiple)
   }
+  .{$prefix}margin-t-{item} {
+    margin-top: size(1 * item * $space-size-multiple)
+  }
+  .{$prefix}margin-r-{item} {
+    margin-right: size(1 * item * $space-size-multiple)
+  }
+  .{$prefix}margin-l-{item} {
+    margin-left: size(1 * item * $space-size-multiple)
+  }
+  .{$prefix}margin-b-{item} {
+    margin-bottom: size(1 * item * $space-size-multiple)
+  }
   .{$prefix}padding-lr-{item} {
     padding-left: size(1 * item * $space-size-multiple)
     padding-right: size(1 * item * $space-size-multiple)

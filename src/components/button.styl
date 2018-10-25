@@ -16,10 +16,14 @@
   borderFun($button-border-color, '', $button-border-size)
   tapColor($button-bg-color)
   color: $button-font-color
+	line-height: 1
   & > .{$prefix}icon {
     margin-right: size(5)
 		vertical-align: middle
   }
+	& > .loading {
+    margin-right: size(5)
+	}
 }
 
 // 循环生成不同颜色的按钮
@@ -68,6 +72,12 @@ for row in ($background-vars) {
 // 大号
 .{$prefix}btn.big {
 	padding: $button-padding-big
+}
+
+// 标签
+.{$prefix}btn.tag {
+	padding: size(3) size(4)
+	spaceMargin(1, 'l')
 }
 
 // 圆形
