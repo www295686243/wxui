@@ -407,6 +407,48 @@ i.w-icon {
 .w-btn.body:active {
   background-color: #dedede;
 }
+.w-btn.ghost {
+  background: transparent;
+}
+.w-btn.ghost.primary {
+  color: #f34;
+}
+.w-btn.ghost.sub {
+  color: #0ae;
+}
+.w-btn.ghost.dot {
+  color: #e33;
+}
+.w-btn.ghost.success {
+  color: #1fb922;
+}
+.w-btn.ghost.error {
+  color: #f8504f;
+}
+.w-btn.ghost.danger {
+  color: #ef4f4f;
+}
+.w-btn.ghost.warning {
+  color: #ffb400;
+}
+.w-btn.ghost.yellow {
+  color: #f60;
+}
+.w-btn.ghost.blue {
+  color: #0ae;
+}
+.w-btn.ghost.green {
+  color: #2c7;
+}
+.w-btn.ghost.white {
+  color: #fff;
+}
+.w-btn.ghost.body {
+  color: #f7f7f7;
+}
+.w-btn.ghost:active {
+  background: #f5f5f5;
+}
 .w-btn.straight {
   border-radius: initial;
 }

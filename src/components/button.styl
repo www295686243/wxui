@@ -31,6 +31,19 @@ for row in ($background-vars) {
   }
 }
 
+// 背景透明
+.{$prefix}btn.ghost {
+	background: transparent
+	for row in ($background-vars) {
+		&.{row} {
+			color: lookup('$color-' + row)
+		}
+	}
+	&:active {
+		background: $color-active	
+	}
+}
+
 // 直角
 .{$prefix}btn.straight {
 	border-radius: initial
