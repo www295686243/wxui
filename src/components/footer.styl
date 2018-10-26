@@ -1,4 +1,15 @@
 .{$prefix}footer {
+  .shadow {
+    box-shadow:0px 8px 20px #CCCCCC  
+  }
+  .box {
+    overflow: hidden
+    position: relative
+    z-index: 10
+    & > div {
+      display: flex
+    }
+  }
   position: fixed
   bottom: 0
   left: 0

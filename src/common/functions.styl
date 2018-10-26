@@ -54,6 +54,10 @@ size($size) {
   ($size)px
 }
 
+fontSize($size) {
+  ($size)px
+}
+
 space($num) {
   size($num * $space-size-multiple)
 }
@@ -92,5 +96,4 @@ spaceMargin($num, $location = '') {
   if ($location == '') {
     margin: space($num)
   }
-  ($size)px
 }

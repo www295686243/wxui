@@ -17,7 +17,8 @@
   tapColor($button-bg-color)
   color: $button-font-color
 	line-height: 1
-  & > .{$prefix}icon {
+  & > .{$prefix}icon,
+	& > .iconfont {
     margin-right: size(5)
 		vertical-align: middle
   }
@@ -29,9 +30,9 @@
 // 循环生成不同颜色的按钮
 for row in ($background-vars) {
   .{$prefix}btn.{row} {
-  	border-color: lookup('$color-' + row)
     tapColor(lookup('$color-' + row))
-		color: #ffffff
+		color: lookup('$color-' + row + '-text') ? lookup('$color-' + row + '-text') : $color-white
+		border-color: lookup('$color-' + row + '-border') ? lookup('$color-' + row + '-border') : lookup('$color-' + row)
   }
 }
 

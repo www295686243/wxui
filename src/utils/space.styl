@@ -30,6 +30,18 @@ for item in range($space-size-min, $space-size-max) {
     padding-top: size(1 * item * $space-size-multiple)
     padding-bottom: size(1 * item * $space-size-multiple)
   }
+  .{$prefix}padding-t-{item} {
+    padding-top: size(1 * item * $space-size-multiple)
+  }
+  .{$prefix}padding-l-{item} {
+    padding-left: size(1 * item * $space-size-multiple)
+  }
+  .{$prefix}padding-r-{item} {
+    padding-right: size(1 * item * $space-size-multiple)
+  }
+  .{$prefix}padding-b-{item} {
+    padding-bottom: size(1 * item * $space-size-multiple)
+  }
   .{$prefix}padding-{item} {
     padding: size(1 * item * $space-size-multiple)
   }
