@@ -527,6 +527,7 @@ i.w-icon {
   text-align: right;
   font-size: 14px;
   padding: 10px 5px 10px 10px;
+  line-height: 1;
 }
 .w-form li .action {
   position: relative;
@@ -1613,9 +1614,149 @@ i.w-icon {
     transform: rotate(360deg);
   }
 }
-.w-header {
+.w-header.primary {
   color: #fff;
+  background: #f34;
+}
+.w-header.primary .w-btn {
   background-color: #f34;
+  color: #fff;
+  border-color: #f34;
+}
+.w-header.primary .w-btn:active {
+  background-color: #e62e3d;
+}
+.w-header.sub {
+  color: #fff;
+  background: #0ae;
+}
+.w-header.sub .w-btn {
+  background-color: #0ae;
+  color: #fff;
+  border-color: #0ae;
+}
+.w-header.sub .w-btn:active {
+  background-color: #0099d6;
+}
+.w-header.dot {
+  color: #fff;
+  background: #e33;
+}
+.w-header.dot .w-btn {
+  background-color: #e33;
+  color: #fff;
+  border-color: #e33;
+}
+.w-header.dot .w-btn:active {
+  background-color: #d62e2e;
+}
+.w-header.success {
+  color: #fff;
+  background: #1fb922;
+}
+.w-header.success .w-btn {
+  background-color: #1fb922;
+  color: #fff;
+  border-color: #1fb922;
+}
+.w-header.success .w-btn:active {
+  background-color: #1ca71f;
+}
+.w-header.error {
+  color: #fff;
+  background: #f8504f;
+}
+.w-header.error .w-btn {
+  background-color: #f8504f;
+  color: #fff;
+  border-color: #f8504f;
+}
+.w-header.error .w-btn:active {
+  background-color: #df4847;
+}
+.w-header.danger {
+  color: #fff;
+  background: #ef4f4f;
+}
+.w-header.danger .w-btn {
+  background-color: #ef4f4f;
+  color: #fff;
+  border-color: #ef4f4f;
+}
+.w-header.danger .w-btn:active {
+  background-color: #d74747;
+}
+.w-header.warning {
+  color: #fff;
+  background: #ffb400;
+}
+.w-header.warning .w-btn {
+  background-color: #ffb400;
+  color: #fff;
+  border-color: #ffb400;
+}
+.w-header.warning .w-btn:active {
+  background-color: #e6a200;
+}
+.w-header.yellow {
+  color: #fff;
+  background: #f60;
+}
+.w-header.yellow .w-btn {
+  background-color: #f60;
+  color: #fff;
+  border-color: #f60;
+}
+.w-header.yellow .w-btn:active {
+  background-color: #e65c00;
+}
+.w-header.blue {
+  color: #fff;
+  background: #0ae;
+}
+.w-header.blue .w-btn {
+  background-color: #0ae;
+  color: #fff;
+  border-color: #0ae;
+}
+.w-header.blue .w-btn:active {
+  background-color: #0099d6;
+}
+.w-header.green {
+  color: #fff;
+  background: #2c7;
+}
+.w-header.green .w-btn {
+  background-color: #2c7;
+  color: #fff;
+  border-color: #2c7;
+}
+.w-header.green .w-btn:active {
+  background-color: #1fb86b;
+}
+.w-header.white {
+  color: #333;
+  background: #fff;
+}
+.w-header.white .w-btn {
+  background-color: #fff;
+  color: #333;
+  border-color: #fff;
+}
+.w-header.white .w-btn:active {
+  background-color: #e6e6e6;
+}
+.w-header.body {
+  color: #fff;
+  background: #f7f7f7;
+}
+.w-header.body .w-btn {
+  background-color: #f7f7f7;
+  color: #fff;
+  border-color: #f7f7f7;
+}
+.w-header.body .w-btn:active {
+  background-color: #dedede;
 }
 .w-header > div {
   display: flex;
@@ -1649,33 +1790,32 @@ i.w-icon {
   align-items: center;
   justify-content: center;
   font-size: 16px;
+  z-index: 1;
 }
 .w-header .left,
 .w-header .right {
   display: flex;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .w-header .left .w-btn,
 .w-header .right .w-btn {
   border-radius: initial;
   border-width: 0px;
 }
+.w-header .left .w-btn .w-badge,
+.w-header .right .w-btn .w-badge {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+}
 .w-header .left .w-icon,
 .w-header .right .w-icon {
-  font-size: 18px;
   margin-right: 0;
+  font-size: 18px;
 }
 .w-header .right span {
   font-size: 14px;
-}
-.w-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 11;
 }
 .w-footer .shadow {
   box-shadow: 0px 8px 20px #ccc;
@@ -1683,45 +1823,50 @@ i.w-icon {
 .w-footer .box {
   overflow: hidden;
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 .w-footer .box > div {
   display: flex;
-}
-.w-footer > div {
-  display: flex;
-  height: 50px;
-  overflow: hidden;
   background: #fff;
 }
-.w-footer > div > .w-btn {
+.w-footer .box > div > .w-btn {
   border-color: transparent;
   border-radius: initial;
   width: auto;
   flex-grow: 1;
   flex-shrink: 1;
+  padding: 8px;
 }
-.w-footer > div > .w-btn .w-icon {
+.w-footer .box > div > .w-btn .w-icon {
   margin-right: 0;
   font-size: 18px;
 }
-.w-footer > div > .w-btn.auto {
+.w-footer .box > div > .w-btn.auto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 0;
   flex-shrink: 0;
 }
-.w-footer .w-btn .w-badge {
+.w-footer .box > div > .w-btn .w-badge {
   position: absolute;
   left: 50%;
   top: 3px;
 }
+.w-footer .box > div > .w-btn > div:nth-child(2) {
+  font-size: 12px;
+  margin-top: 4px;
+}
 .w-badge {
   display: inline-block;
-  line-height: 18px;
-  height: 18px;
+  line-height: 16px;
+  height: 16px;
+  min-width: 16px;
   font-size: 12px;
   border-radius: 12px;
   white-space: nowrap;
-  padding: 0 5px;
+  padding-right: 4px;
+  padding-left: 4px;
   color: #fff;
   background-color: #e33;
   text-rendering: optimizeLegibility;

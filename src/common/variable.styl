@@ -2,7 +2,12 @@
 $prefix = 'w-'
 
 // global
-$z-index        = 1 // 定位的默认层级
+$z-index-1        = 1 // 用于border
+$z-index-2        = 2 // 用于footer
+$z-index-3        = 3
+$z-index-4        = 4 // 用于popup
+$z-index-5        = 5 // 用于弹窗遮罩
+$z-index-6        = 6
 
 // 主要颜色 应用于文字、背景、边框等
 $color-primary     = #ff3344 // 主色
@@ -51,7 +56,7 @@ $body-family   = "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif /
 
 // button
 $button-font-color            = #333333 // 默认文字颜色
-$button-font-size             = size(12) // 默认字体大小
+$button-font-size             = fontSize(12) // 默认字体大小
 $button-border-color          = #dddddd // 默认边框颜色
 $button-border-size           = 1px // 默认边框大小
 $button-bg-color              = transparent // 默认背景颜色(透明)

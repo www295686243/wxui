@@ -5,44 +5,39 @@
   .box {
     overflow: hidden
     position: relative
-    z-index: 10
+    z-index: $z-index-2
     & > div {
       display: flex
-    }
-  }
-  position: fixed
-  bottom: 0
-  left: 0
-  width: 100%
-  text-align: center
-  z-index: 11
-  & > div {
-    display: flex
-    height: size(50)
-    overflow: hidden
-    background: #ffffff
-    & > .{$prefix}btn {
-      border-color: transparent
-      border-radius: initial
-      width: auto
-      flex-grow: 1
-      flex-shrink: 1
-      & .{$prefix}icon {
-        margin-right: 0
-        font-size: size(18)
+      background: $color-white
+      & > .{$prefix}btn {
+        border-color: transparent
+        border-radius: initial
+        width: auto
+        flex-grow: 1
+        flex-shrink: 1
+        spacePadding(2)
+        & .{$prefix}icon {
+          margin-right: 0
+          font-size: fontSize(18)
+        }
+        &.auto {
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-grow: 0
+          flex-shrink: 0
+        }
+        // badge
+        .{$prefix}badge {
+          position: absolute
+          left: 50%
+          top: size(3)
+        }
+        & > div:nth-child(2) {
+          font-size: fontSize(12)
+          spaceMargin(1, 't')
+        }
       }
-      &.auto {
-        flex-grow: 0
-        flex-shrink: 0
-      }
     }
-  }
-  // badge
-  .{$prefix}btn {
-    .{$prefix}badge {
-      position: absolute
-      left: 50%
-      top: size(3)
-    }  
   }
 }

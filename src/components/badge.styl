@@ -1,11 +1,12 @@
 .{$prefix}badge {
   display: inline-block
-  line-height: 18px
-  height: 18px
-  font-size: 12px
-  border-radius: 12px
+  line-height: size(16)
+  height: size(16)
+  min-width: size(16)
+  font-size: fontSize(12)
+  border-radius: size(12)
   white-space: nowrap
-  padding: 0 5px
+  spacePadding(1, 'lr')
   color: $color-white
   background-color: $color-dot
   // 定义浏览器渲染引擎如何渲染字体
@@ -18,10 +19,10 @@
   display: inline-block
   line-height: 1
   background-color: $color-dot
-  padding: 4px
+  padding: size(4)
   border-radius: 100px
 }
 .{$prefix}dot-small {
   @extend .{$prefix}dot
-  padding: 3px
+  padding: size(3)
 }

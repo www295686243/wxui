@@ -1,6 +1,16 @@
 .{$prefix}header {
-  color: #fff
-  background-color: $color-primary
+  // 循环生成不同颜色的主题
+  for row in ($background-vars) {
+    &.{row} {
+      color: row == 'white' ? $font-color : $color-white
+      background: lookup('$color-' + row)
+      .{$prefix}btn {
+        tapColor(lookup('$color-' + row))
+        color: row == 'white' ? $font-color : $color-white
+        border-color: lookup('$color-' + row)
+      }
+    }
+  }
   & > div {
     display: flex
     justify-content: space-between
@@ -31,25 +41,32 @@
     padding: 0 size(50)
     align-items: center
     justify-content: center
-    font-size: size(16)
+    font-size: fontSize(16)
+    z-index: $z-index-1
   }
   .left,
   .right {
     display: flex
     height: 100%
+    z-index: $z-index-2
     .{$prefix}btn {
       border-radius: initial
       border-width: 0px
+      // badge
+      .{$prefix}badge {
+        position: absolute
+        left: 50%
+        top: size(5)
+      }
     }
-    z-index: 1
     .{$prefix}icon {
-      font-size: size(18)
       margin-right: 0
-    }  
+      font-size: fontSize(18)
+    } 
   }
   .right {
     span {
-      font-size: size(14)
-    }  
+      font-size: fontSize(14)
+    }
   }
 }
