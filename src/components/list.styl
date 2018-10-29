@@ -27,6 +27,12 @@
         padding: size(1) * item * $space-size-multiple
       }  
     }
+    &.padding-tb-{item} {
+      & > li {
+        padding-top: size(1) * item * $space-size-multiple
+        padding-bottom: size(1) * item * $space-size-multiple
+      }  
+    }
     &.margin-{item} {
       // background: $body-bg
       & > li {
@@ -117,6 +123,26 @@
           border-radius: size(2 * item * $radius-size-multiple)  
         }
       }
+    }
+  }
+  // li带单选效果
+  li.radio {
+    spacePadding(5, 'r')
+    @extend .{$prefix}icon
+    &:before {
+      content: "\e67b"
+      position: absolute
+      right: space(2)
+      top: 50%
+      transform: translateY(-50%)
+      font-size: fontSize(14)
+      color: $color-primary
+    }
+    &:active {
+      background-color: $color-active
+    }
+    & > .info {
+      padding-right: 0 !important
     }
   }
 }

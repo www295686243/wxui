@@ -1,0 +1,23 @@
+.{$prefix}table {
+  border-collapse: collapse
+  border-spacing: 0
+  tr {
+    td, th {
+      padding: size(10)
+    }
+    th {
+      background: #F5F7FA
+    }
+  }
+  &.full {
+    width: 100%  
+  }
+  &.striped {
+    & > tr:nth-child(odd) > td {
+      background: #F5F7FA
+    }
+  }
+  &.nowrap {
+    white-space: nowrap
+  }
+}

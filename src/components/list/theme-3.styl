@@ -84,5 +84,42 @@
         }
       }
     }
+
+    &.table {
+      @extend .{$prefix}border-t
+      @extend .{$prefix}border-l
+      text-align: center
+      & > li {
+        padding: size(5) 0
+        @extend .{$prefix}border-r
+        @extend .{$prefix}border-b
+      }
+    }
+
+    // 右侧带线(除最后一个)
+    &.line-right {
+      & > li {
+        background: $color-body
+        &.active {
+          background: $color-primary
+          color: $color-white
+        }
+      }
+      & > li:first-child {
+        border-top-left-radius: 4px
+        border-bottom-left-radius: 4px
+      }
+      & > li:last-child {
+        border-top-right-radius: 4px
+        border-bottom-right-radius: 4px
+      }
+      & > li:not(:last-child) {
+        @extend .{$prefix}border-r
+        &:after {
+          border-color: #E6EBF2
+        }
+      }
+    }
+
   }
 }
