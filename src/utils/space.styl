@@ -52,3 +52,11 @@ for item in range($space-small-size-min, $space-small-size-max) {
     padding: size(1 * item * $space-small-size-multiple)
   }
 }
+
+// 间距
+for num in (1..4) {
+  .{$prefix}break-{num} {
+    background-color: $body-bg
+    height: size(num * 5)
+  }
+}

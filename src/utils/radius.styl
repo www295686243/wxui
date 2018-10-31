@@ -1,5 +1,8 @@
 for item in range($radius-size-min, $radius-size-max) {
   .{$prefix}radius-{item} {
     border-radius: size(1 * item * $radius-size-multiple)
+    &:after {
+      border-radius: size(2 * item * $radius-size-multiple)
+    }
   }
 }
