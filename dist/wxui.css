@@ -10,7 +10,10 @@
 .w-list.info-line > li > .info,
 .w-list.theme-3.table,
 .w-list.theme-3.table > li,
-.w-list.theme-3.line-right > li:not(:last-child) {
+.w-list.theme-3.line-right > li:not(:last-child),
+.w-table.border,
+.w-table.border tr th,
+.w-table.border tr td {
   position: relative;
 }
 .w-border:after,
@@ -25,7 +28,10 @@
 .w-list.info-line > li > .info:after,
 .w-list.theme-3.table:after,
 .w-list.theme-3.table > li:after,
-.w-list.theme-3.line-right > li:not(:last-child):after {
+.w-list.theme-3.line-right > li:not(:last-child):after,
+.w-table.border:after,
+.w-table.border tr th:after,
+.w-table.border tr td:after {
   display: block;
   content: '';
   position: absolute;
@@ -41,23 +47,29 @@
   border: 1px solid #ccc;
 }
 .w-border-t:after,
-.w-list.theme-3.table:after {
+.w-list.theme-3.table:after,
+.w-table.border:after {
   border-top: 1px solid #ccc;
 }
 .w-border-r:after,
 .w-list.theme-3.table > li:after,
-.w-list.theme-3.line-right > li:not(:last-child):after {
+.w-list.theme-3.line-right > li:not(:last-child):after,
+.w-table.border tr th:after,
+.w-table.border tr td:after {
   border-right: 1px solid #ccc;
 }
 .w-border-b:after,
 .w-list.line > li:not(:last-child):after,
 .w-list li.line:after,
 .w-list.info-line > li > .info:after,
-.w-list.theme-3.table > li:after {
+.w-list.theme-3.table > li:after,
+.w-table.border tr th:after,
+.w-table.border tr td:after {
   border-bottom: 1px solid #ccc;
 }
 .w-border-l:after,
-.w-list.theme-3.table:after {
+.w-list.theme-3.table:after,
+.w-table.border:after {
   border-left: 1px solid #ccc;
 }
 .w-border-tb:after {
@@ -2063,18 +2075,6 @@ i.w-icon {
 }
 .w-table.nowrap {
   white-space: nowrap;
-}
-.w-table.border {
-  border: 1px solid #ccc;
-}
-.w-table.border tr th {
-  border: 1px solid #ccc;
-}
-.w-table.border tr td {
-  border: 1px solid #ccc;
-}
-.w-table.fixed {
-  table-layout: fixed;
 }
 *,
 *:before,

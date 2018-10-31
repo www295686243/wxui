@@ -21,17 +21,17 @@
     white-space: nowrap
   }
   &.border {
-    border:1px solid #ccc;
+    @extend .{$prefix}border-t
+    @extend .{$prefix}border-l
     tr {
       th{
-        border:1px solid #ccc;
+        @extend .{$prefix}border-r
+        @extend .{$prefix}border-b
       }
       td{
-        border:1px solid #ccc;
+        @extend .{$prefix}border-r
+        @extend .{$prefix}border-b
       }
     }
-  }
-  &.fixed{
-    table-layout:fixed;
   }
 }
