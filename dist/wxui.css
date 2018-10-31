@@ -2064,6 +2064,18 @@ i.w-icon {
 .w-table.nowrap {
   white-space: nowrap;
 }
+.w-table.border {
+  border: 1px solid #ccc;
+}
+.w-table.border tr th {
+  border: 1px solid #ccc;
+}
+.w-table.border tr td {
+  border: 1px solid #ccc;
+}
+.w-table.fixed {
+  table-layout: fixed;
+}
 *,
 *:before,
 *:after {
