@@ -1459,6 +1459,50 @@ i.w-icon {
   width: 100%;
   display: block;
 }
+.w-list.theme-3.col-7 > li {
+  width: 14.285714285714286%;
+}
+.w-list.theme-3.col-7 > li > div {
+  position: relative;
+}
+.w-list.theme-3.col-7 > li > img,
+.w-list.theme-3.col-7 > li > .box > img {
+  width: 100%;
+  display: block;
+}
+.w-list.theme-3.col-8 > li {
+  width: 12.5%;
+}
+.w-list.theme-3.col-8 > li > div {
+  position: relative;
+}
+.w-list.theme-3.col-8 > li > img,
+.w-list.theme-3.col-8 > li > .box > img {
+  width: 100%;
+  display: block;
+}
+.w-list.theme-3.col-9 > li {
+  width: 11.11111111111111%;
+}
+.w-list.theme-3.col-9 > li > div {
+  position: relative;
+}
+.w-list.theme-3.col-9 > li > img,
+.w-list.theme-3.col-9 > li > .box > img {
+  width: 100%;
+  display: block;
+}
+.w-list.theme-3.col-10 > li {
+  width: 10%;
+}
+.w-list.theme-3.col-10 > li > div {
+  position: relative;
+}
+.w-list.theme-3.col-10 > li > img,
+.w-list.theme-3.col-10 > li > .box > img {
+  width: 100%;
+  display: block;
+}
 .w-list.theme-3.padding-small-1 {
   padding: 1px;
 }
@@ -3455,4 +3499,8 @@ h6 {
 }
 .w-radius-8:after {
   border-radius: 64px;
+}
+.w-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }

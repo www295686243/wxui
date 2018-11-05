@@ -1,6 +1,6 @@
 {
   "name": "wxcss",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "a mobile ui framework",
   "scripts": {
     "dev": "webpack --watch",
@@ -42,7 +42,5 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0"
   },
-  "dependencies": {
-    "flex.css": "^1.1.7"
-  }
+  "dependencies": {}
 }
