@@ -14,8 +14,8 @@
 .w-table.border,
 .w-table.border tr th,
 .w-table.border tr td,
-.w-table.border-b tr th,
-.w-table.border-b tr td {
+.w-table.line tr th,
+.w-table.line tr td {
   position: relative;
 }
 .w-border:after,
@@ -34,8 +34,8 @@
 .w-table.border:after,
 .w-table.border tr th:after,
 .w-table.border tr td:after,
-.w-table.border-b tr th:after,
-.w-table.border-b tr td:after {
+.w-table.line tr th:after,
+.w-table.line tr td:after {
   display: block;
   content: '';
   position: absolute;
@@ -69,8 +69,8 @@
 .w-list.theme-3.table > li:after,
 .w-table.border tr th:after,
 .w-table.border tr td:after,
-.w-table.border-b tr th:after,
-.w-table.border-b tr td:after {
+.w-table.line tr th:after,
+.w-table.line tr td:after {
   border-bottom: 1px solid #ccc;
 }
 .w-border-l:after,
