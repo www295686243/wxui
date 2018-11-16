@@ -3,6 +3,9 @@
   display: inline-block
   -webkit-appearance: none
   font-size: fontSize(20)
+  width: size(20)
+  height: size(20)
+  line-height: 1
   color: $border-color
   @extend .{$prefix}icon
   &:before {
@@ -39,6 +42,8 @@ checkbox($size, $class) {
   .{$prefix}checkbox-{$class} {
     @extend .{$prefix}checkbox
     font-size: $size
+    width: size($size)
+    height: size($size)
   }
 }
 

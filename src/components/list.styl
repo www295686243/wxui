@@ -119,6 +119,7 @@
   for item in range($radius-size-min, $radius-size-max) {
     &.radius-{item} {
       & > li {
+        border-radius: size(item * $radius-size-multiple)  
         &:after {
           border-radius: size(2 * item * $radius-size-multiple)  
         }

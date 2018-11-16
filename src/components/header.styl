@@ -1,13 +1,13 @@
 .{$prefix}header {
+  position: relative
   // 循环生成不同颜色的主题
   for row in ($background-vars) {
     &.{row} {
       color: row == 'white' ? $font-color : $color-white
       background: lookup('$color-' + row)
       .{$prefix}btn {
-        tapColor(lookup('$color-' + row))
+        // tapColor(lookup('$color-' + row))
         color: row == 'white' ? $font-color : $color-white
-        border-color: lookup('$color-' + row)
       }
     }
   }
@@ -16,7 +16,6 @@
     justify-content: space-between
     align-items: center
     height: size(44)
-    position: relative
   }
   .{$prefix}search {
     height: size(40)
@@ -52,6 +51,7 @@
     .{$prefix}btn {
       border-radius: initial
       border-width: 0px
+      background: transparent
       // badge
       .{$prefix}badge {
         position: absolute
@@ -59,7 +59,7 @@
         top: size(5)
       }
     }
-    .{$prefix}icon {
+    i {
       margin-right: 0
       font-size: fontSize(18)
     } 
