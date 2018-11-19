@@ -12,12 +12,28 @@ for item in range($font-size-min, $font-size-max) {
 }
 
 // H标签
-for item in range(1, 6) {
-  h{item} {
-    font-size: fontSize(($font-size-max - item) * 2 + 6)
-    font-weight: normal
-    line-height: 1
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal
+  line-height: 1
+}
+
+h1 {
+  font-size: size(22)
+}
+h2 {
+  font-size: size(20)
+}
+h3 {
+  font-size: size(18)
+}
+h4 {
+  font-size: size(16)
+}
+h5 {
+  font-size: size(14)
+}
+h6 {
+  font-size: size(12)
 }
 
 // 默认颜色
