@@ -1,6 +1,6 @@
 {
   "name": "wxcss",
-  "version": "0.4.2",
+  "version": "0.4.6",
   "description": "a mobile ui framework",
   "scripts": {
     "dev": "webpack --watch",
